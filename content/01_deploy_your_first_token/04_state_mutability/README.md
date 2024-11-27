@@ -1,21 +1,21 @@
-# State Mutability
+# Mutabilidad de Estado
 
-### Introduction
+### Introducción
 
-State mutability in Solidity specifies how a function interacts with the contract's state and the blockchain. Understanding state mutability is crucial for optimizing gas usage and ensuring that functions behave as intended. 
+La mutabilidad de estado en Solidity especifica cómo una función interactúa con el estado del contrato y la blockchain. Comprender la mutabilidad de estado es crucial para optimizar el uso de gas y garantizar que las funciones se comporten como se espera.
 
-There are three primary types of state mutability in Solidity: `pure`, `view`, and `nonpayable`.
+Existen tres tipos principales de mutabilidad de estado en Solidity: `pure`, `view` y `nonpayable`.
 
 ### Pure
 
-A `pure` function indicates that it does not read or modify the contract's state. It solely relies on its input parameters and is typically used for computations.
+Una función `pure` indica que no lee ni modifica el estado del contrato. Solo depende de sus parámetros de entrada y se utiliza típicamente para cálculos.
 
 ### View
 
-A `view` function allows reading the contract's state but prohibits any modifications. It can be used to access data stored in the contract without changing it.
+Una función `view` permite leer el estado del contrato, pero prohíbe cualquier modificación. Puede utilizarse para acceder a los datos almacenados en el contrato sin cambiarlos.
 
 ### Nonpayable
 
-A `nonpayable` function can modify the contract's state and allows for receiving Ether but does not accept any Ether during the call. It is the default state mutability if none is specified.
+Una función `nonpayable` puede modificar el estado del contrato y permite recibir Ether, pero no acepta ningún Ether durante la llamada. Es la mutabilidad de estado predeterminada si no se especifica ninguna.
 
-By using the correct state mutability for your functions, you can ensure clarity in their behavior and optimize gas costs for your contract's interactions.
+Al utilizar la mutabilidad de estado correcta para tus funciones, puedes garantizar claridad en su comportamiento y optimizar los costos de gas para las interacciones de tu contrato.

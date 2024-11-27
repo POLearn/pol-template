@@ -1,42 +1,42 @@
-# Functions
+# Funciones
 
-### Introduction
+### Introducción
 
-Now that we have a contract set up with some state variables, let's dive into how we can use functions to interact with them
+Ahora que tenemos un contrato configurado con algunas variables de estado, vamos a sumergirnos en cómo podemos usar funciones para interactuar con ellas.
 
-### Function Definition
+### Definición de Función
 
-Before we can use a function in our `SimpleContract`, we need to define it. In Solidity, functions are defined using the `function` keyword, followed by a unique function name, an optional list of parameters, and a statement block enclosed in curly braces. A basic **syntax** is,
+Antes de poder usar una función en nuestro `SimpleContract`, necesitamos definirla. En Solidity, las funciones se definen utilizando la palabra clave `function`, seguida de un nombre único para la función, una lista opcional de parámetros y un bloque de instrucciones encerrado entre llaves. La **sintaxis básica** es:
 
 ```solidity
-function functionName(int arg1, string memory arg2, ...) visisbility stateMutilability returns() {
-   // Logics goes here :)
+function functionName(int arg1, string memory arg2, ...) visibilidad mutabilidadEstado retorna() {
+   // La lógica va aquí :)
 }
 ```
 
-### Function Name
+### Nombre de la Función
 
-This declares the function with a unique name (`functionName`), which is how you will call it.
+Este declara la función con un nombre único (`functionName`), que es cómo la llamarás.
 
-### Parameters
+### Parámetros
 
-This part specifies the function's parameters, where `arg1` is an integer and `arg2` is a string stored in memory; additional parameters can be included as needed.
+Esta parte especifica los parámetros de la función, donde `arg1` es un entero y `arg2` es una cadena almacenada en memoria; se pueden incluir parámetros adicionales según sea necesario.
 
-### Visibility
+### Visibilidad
 
-This defines the access level of the function, such as `public`, `private`, or `internal`, determining who can call the function.
+Esto define el nivel de acceso de la función, como `public`, `private` o `internal`, determinando quién puede llamar a la función.
 
-### State Mutability
+### Mutabilidad de Estado
 
-> ⚠️**Note:** We'll be going over the concept of scope in the next resource!
+> ⚠️**Nota:** ¡Abordaremos el concepto de alcance (scope) en el siguiente recurso!
 
-This indicates whether the function can modify the contract's state (e.g., `pure`, `view`, or `nonpayable`), affecting how it interacts with the blockchain.
+Esto indica si la función puede modificar el estado del contrato (por ejemplo, `pure`, `view` o `nonpayable`), lo que afecta cómo interactúa con la blockchain.
 
-### Return Types
+### Tipos de Retorno
 
-This specifies the return type of the function, indicating what value it will output when called; the parentheses can contain the type if the function returns a value.
+Esto especifica el tipo de retorno de la función, indicando qué valor devolverá cuando se llame; los paréntesis pueden contener el tipo si la función devuelve un valor.
 
-For example, `returns(uint)` means the function will return an unsigned integer.
+Por ejemplo, `returns(uint)` significa que la función devolverá un entero sin signo.
 
 ```solidity
 function getValue() public view returns(uint) {
@@ -44,12 +44,12 @@ function getValue() public view returns(uint) {
 }
 ```
 
-### Task 📝
+### Tarea 📝
 
-Add the following function to your `SimpleContract` to allow users to set the `name` state variable:
+Añade la siguiente función a tu `SimpleContract` para permitir que los usuarios configuren la variable de estado `name`:
 
 ```solidity
 function set(string memory _name) public;
 ```
 
-This function takes a string parameter `_name` and updates the `name` variable in the contract.
+Esta función toma un parámetro de tipo cadena `_name` y actualiza la variable `name` en el contrato.

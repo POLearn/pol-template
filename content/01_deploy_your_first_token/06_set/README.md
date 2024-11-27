@@ -1,23 +1,23 @@
-# Interaction with a Smart Contract
+# Interacción con un Contrato Inteligente
 
-### Introduction
+### Introducción
 
-In this final section of deploying your first contract, let's learn how to interact with your deployed contract by using the setter method to update the name variable 🔧
+En esta última sección sobre el despliegue de tu primer contrato, aprenderemos cómo interactuar con tu contrato desplegado utilizando el método setter para actualizar la variable `name` 🔧
 
-> Prerequisite: Ensure you have MetaMask installed and connected to the Open Campus Codex network, and your SimpleContract is successfully deployed.
+> Prerequisito: Asegúrate de tener MetaMask instalado y conectado a la red Open Campus Codex, y que tu contrato `SimpleContract` esté correctamente desplegado.
 
-### Interacting with the Contract
+### Interactuar con el Contrato
 
-Now that your SimpleContract is deployed on the Open Campus Codex network, let's change the name variable to `Vitalik` using the set method and retrieve the transaction hash to verify the transaction.
+Ahora que tu contrato `SimpleContract` está desplegado en la red Open Campus Codex, vamos a cambiar la variable `name` a **Vitalik** usando el método `set` y recuperar el hash de la transacción para verificar la transacción.
 
-#### Call the set Method
+#### Llamar al Método `set`
 
-First, locate the set function in your contract interface. In the input field, type **Vitalik** and click "Transact." MetaMask will prompt you to confirm the transaction—approve it and wait for the transaction to be processed.
+Primero, localiza la función `set` en la interfaz de tu contrato. En el campo de entrada, escribe **Vitalik** y haz clic en "Transact." MetaMask te pedirá que confirmes la transacción; apruébala y espera a que la transacción sea procesada.
 
-#### Verify the Contract's State
+#### Verificar el Estado del Contrato
 
-Once the transaction is confirmed, call the name function in your contract to check its current value. If it returns Vitalik, congratulations! You've successfully interacted with your contract and updated its state. 🎉
+Una vez que la transacción sea confirmada, llama a la función `name` en tu contrato para verificar su valor actual. Si devuelve **Vitalik**, ¡felicitaciones! Has interactuado con éxito con tu contrato y actualizado su estado. 🎉
 
-### ❗Submit the Transaction to Proof of Learn
+### ❗Enviar la Transacción a Proof of Learn
 
-To validate this thequest, submit the transaction hash to the Proof of Learn (POL) platform. This confirms that you've successfully interacted with the smart contract.
+Para validar esta misión, envía el hash de la transacción a la plataforma Proof of Learn (POL). Esto confirma que has interactuado con éxito con el contrato inteligente.

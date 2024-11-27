@@ -1,12 +1,14 @@
-# Leveling Up: Deploying an ERC20 Token
+# Subiendo de Nivel: Desplegando un Token ERC20
 
-Now that you've successfully deployed and interacted with your first smart contract, it’s time to take things up a notch! In this next part, we’ll guide you through deploying your own ERC20 token, using OpenZeppelin’s battle-tested ERC20🪙 implementation. Let’s get started on creating your very own token on the Open Campus Codex network
+¡Ahora que has desplegado e interactuado con tu primer contrato inteligente, es hora de llevar las cosas al siguiente nivel! En esta parte, te guiaremos para desplegar tu propio token ERC20, utilizando la implementación probada de OpenZeppelin. ¡Vamos a crear tu propio token en la red Open Campus Codex!
 
-### What is OpenZeppelin?
+### ¿Qué es OpenZeppelin?
 
-OpenZeppelin is a library for secure smart contract development. It provides implementations of popular token standards, including ERC20, which you can use to create your own tokens without having to reinvent the wheel. Using OpenZeppelin's implementations ensures that your token adheres to best practices and standards in the Ethereum ecosystem.
+OpenZeppelin es una biblioteca para el desarrollo de contratos inteligentes seguros. Proporciona implementaciones de estándares populares de tokens, incluidos ERC20, que puedes usar para crear tus propios tokens sin tener que reinventar la rueda. Usar las implementaciones de OpenZeppelin garantiza que tu token siga las mejores prácticas y estándares en el ecosistema de Ethereum.
 
-From understanding the basic structure of the contract, let create a `SampleERCToken`
+### Crear un `SampleERCToken`
+
+Comencemos creando un contrato básico para el token ERC20, llamado `SampleERCToken`:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -16,51 +18,53 @@ contract SampleERCToken {
 }
 ```
 
+### Importar ERC20 de OpenZeppelin
 
-### Import OpenZeppelin ERC20
-
-In your `TokenPoken.sol` file, start by importing OpenZeppelin’s ERC20 implementation with the following statement:
+En tu archivo `TokenPoken.sol`, comienza importando la implementación de ERC20 de OpenZeppelin con la siguiente declaración:
 
 ```solidity
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 ```
 
-This allows you to inherit the ERC20 contract and build your token on top of it. OpenZeppelin provides a secure, battle-tested foundation for ERC20 tokens.
+Esto te permite heredar el contrato ERC20 y construir tu token sobre él. OpenZeppelin proporciona una base segura y probada para los tokens ERC20.
 
-### Write the Token Contract
+### Escribir el Contrato del Token
 
-Next, define your ERC20 token by writing the contract code. Use the name "TokenPoken" and symbol "TP" as arguments to the ERC20 constructor. Make sure the constructor is empty, only calling the `ERC20` constructor:
+Ahora, define tu token ERC20 escribiendo el código del contrato. Usa el nombre "TokenPoken" y el símbolo "TP" como argumentos para el constructor ERC20. Asegúrate de que el constructor esté vacío, solo llamando al constructor `ERC20`:
 
-For more details on the ERC20 contract, refer to the [OpenZeppelin documentation](https://docs.openzeppelin.com/contracts/4.x/erc20) to understand its features and functionality.
-
-Here's a head start,
+Aquí tienes un ejemplo de código para comenzar:
 
 ```solidity
 contract SampleERCToken is ERC20 { 
-	// ...
+    constructor() ERC20("TokenPoken", "TP") {
+        _mint(msg.sender, 1000000 * 10 ** decimals());
+    }
 }
 ```
 
-This code defines the basic structure of your token, using OpenZeppelin's contract for security and ease.
+Este código define la estructura básica de tu token, utilizando el contrato ERC20 de OpenZeppelin para garantizar seguridad y facilidad.
 
-### Compile the Contract
+- **ERC20("TokenPoken", "TP")**: Esto establece el nombre y el símbolo de tu token.
+- **_mint(msg.sender, 1000000 * 10 ** decimals())**: Minta 1 millón de tokens al creador del contrato (tu dirección).
 
-To compile, open your Solidity IDE and select the **0.8.23** compiler version. Click "Compile" to ensure there are no errors, and a green checkmark should confirm successful compilation.
+### Compilar el Contrato
 
-### Deploy the Contract
+Para compilar, abre tu IDE de Solidity y selecciona la versión del compilador **0.8.23**. Haz clic en "Compilar" para asegurarte de que no haya errores. Un **check verde** confirmará una compilación exitosa.
 
-If you are using the Solide IDE, in the **Build & Deploy Tab**, select the the `SampleERCToken` and click on **Deploy**
+### Desplegar el Contrato
 
-### Testing Your Token
+Si estás usando el IDE de Solide, en la **pestaña Build & Deploy**, selecciona el contrato `SampleERCToken` y haz clic en **Deploy**.
 
-Once your `TokenPoken` contract is deployed, you can interact with its inherited ERC20 functions. Here are a few actions to try:
+### Probar Tu Token
 
-- 🧮 **Check Total Supply:** Call `totalSupply` to view the total TokenPoken tokens.
-- 👛 **Check Your Balance:** Use `balanceOf` with your address to see your token balance.
-- 🔄 **Transfer Tokens:** Try the `transfer` function to send tokens to another wallet.
+Una vez que tu contrato `TokenPoken` esté desplegado, puedes interactuar con las funciones heredadas de ERC20. Aquí tienes algunas acciones para probar:
 
-### ❗Submit the Deployment to Proof of Learn
+- 🧮 **Comprobar el suministro total:** Llama a `totalSupply` para ver el suministro total de tokens TokenPoken.
+- 👛 **Verifica tu balance:** Usa `balanceOf` con tu dirección para ver tu saldo de tokens.
+- 🔄 **Transferir Tokens:** Prueba la función `transfer` para enviar tokens a otra billetera.
 
-If you deployed a `SimpleContract` earlier, you can do the same for `SimpleERCToken`. Congratulations! You've successfully created and deployed your own ERC20 token called TokenPoken with the symbol TP using OpenZeppelin's ERC20 contract. This exercise demonstrates the power and ease of using OpenZeppelin for secure and standardized smart contract development.
+### ❗Enviar el Despliegue a Proof of Learn
 
-Make sure you claim for **FREE POL POAP** from Proof of Learn, showcasing you deployed and interact smart contract on Open Campus Codex! 🎉🎉🎉
+Si ya desplegaste un `SimpleContract` anteriormente, ahora puedes hacer lo mismo con el `SampleERCToken`. ¡Felicidades! Has creado y desplegado con éxito tu propio token ERC20 llamado TokenPoken con el símbolo TP utilizando el contrato ERC20 de OpenZeppelin. Este ejercicio demuestra el poder y la facilidad de usar OpenZeppelin para el desarrollo seguro y estandarizado de contratos inteligentes.
+
+No olvides reclamar tu **POAP GRATUITO** en Proof of Learn, mostrando que has desplegado e interactuado con un contrato inteligente en Open Campus Codex. 🎉🎉🎉

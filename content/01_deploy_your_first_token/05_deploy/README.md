@@ -1,43 +1,43 @@
-# Deploy a Smart Contract
+# Desplegar un Contrato Inteligente
 
-### Introduction
+### Introducción
 
-Having covered the fundamentals of Solidity, including contract structure, state variables, function definitions, and state mutability, it's now time to deploy the `SimpleContract` contract! 🚀
+Después de haber cubierto los fundamentos de Solidity, incluyendo la estructura del contrato, variables de estado, definiciones de funciones y mutabilidad de estado, ¡es hora de desplegar el contrato `SimpleContract`! 🚀
 
-### Adding the Open Campus Codex Network
+### Añadir la Red Open Campus Codex
 
-To deploy your contract to the Open Campus Codex network, you'll need to add this custom network to MetaMask. Follow the steps below and use the details provided in the table:
+Para desplegar tu contrato en la red Open Campus Codex, necesitarás agregar esta red personalizada a MetaMask. Sigue los pasos a continuación y utiliza los detalles proporcionados en la tabla:
 
-1. Open MetaMask and click on the network dropdown at the top.
-2. Select "Add Network" and fill in the following details:
+1. Abre MetaMask y haz clic en el menú desplegable de redes en la parte superior.
+2. Selecciona "Añadir Red" y completa los siguientes detalles:
 
-| **Field**            | **Details**                                  |
+| **Campo**            | **Detalles**                                  |
 |----------------------|----------------------------------------------|
-| **Network Name**      | Open Campus Codex                            |
-| **New RPC URL**       | `https://open-campus-codex-sepolia.drpc.org` |
-| **Chain ID**          | `656476`                                     |
-| **Currency Symbol**   | `EDU`                                        |
-| **Block Explorer URL**| `https://opencampus-codex.blockscout.com/`   |
+| **Nombre de Red**     | Open Campus Codex                            |
+| **Nueva URL RPC**     | `https://open-campus-codex-sepolia.drpc.org` |
+| **ID de Cadena**      | `656476`                                     |
+| **Símbolo de Moneda** | `EDU`                                        |
+| **URL del Explorador de Bloques** | `https://opencampus-codex.blockscout.com/` |
 
-Once you've added these details, you'll be connected to the Open Campus Codex network and ready to deploy your contract! 🎉
+Una vez que hayas agregado estos detalles, estarás conectado a la red Open Campus Codex y listo para desplegar tu contrato. 🎉
 
-### Compile the Contract
+### Compilar el Contrato
 
-- Set your Solidity compiler version to **0.8.23**.
-- Compile the `SimpleContract` from the earlier example.
+- Establece la versión de tu compilador de Solidity a **0.8.23**.
+- Compila el contrato `SimpleContract` del ejemplo anterior.
 
-### Deploy the Contract
+### Desplegar el Contrato
 
-- After compilation, deploy the `SimpleContract` to the Open Campus Codex network. MetaMask will prompt you to approve the transaction for deployment.
+- Después de la compilación, despliega el contrato `SimpleContract` en la red Open Campus Codex. MetaMask te pedirá aprobar la transacción para el despliegue.
 
-Once the transaction is confirmed, your contract is successfully deployed!
+Una vez que la transacción sea confirmada, ¡tu contrato estará desplegado con éxito!
 
-Congratulations! You've successfully configured MetaMask for the Open Campus Codex network, deployed a Solidity contract, and now can interacted with it. 🎉
+¡Felicidades! Has configurado MetaMask para la red Open Campus Codex, desplegado un contrato Solidity y ahora puedes interactuar con él. 🎉
 
-### ❗Submit the Deployment to Proof of Learn
+### ❗Enviar el Despliegue a Proof of Learn
 
-To complete this quest on POL, submit your deployed contract transaction to the Proof of Learn (POL) platform. This confirms that you've successfully deployed the contract. You can earn yourself a 🏆**POL POAP**.
- 
-### Conclusion
+Para completar esta misión en POL, envía tu transacción de contrato desplegado a la plataforma Proof of Learn (POL). Esto confirma que has desplegado el contrato con éxito. ¡Podrás ganar un 🏆**POL POAP**!
 
-Now that your contract is deployed, it's time to dive deeper! In the next section, we'll explore how to interact with your deployed contract, update the `name` variable, and modify the contract state using its functions. Stay tuned⚡
+### Conclusión
+
+Ahora que tu contrato está desplegado, ¡es hora de profundizar más! En la siguiente sección, exploraremos cómo interactuar con tu contrato desplegado, actualizar la variable `name` y modificar el estado del contrato utilizando sus funciones. ¡Mantente atento! ⚡

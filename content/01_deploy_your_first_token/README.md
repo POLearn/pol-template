@@ -1,15 +1,15 @@
-# Proof of Learn (POL) 3 Template
+# Plantilla Proof of Learn (POL) 3
 
-This template is your perfect starting point for creating engaging and interactive learning content on the **Proof of Learn (POL)** platform!
+¡Esta plantilla es el punto de partida perfecto para crear contenido de aprendizaje interactivo y atractivo en la plataforma **Proof of Learn (POL)**!
 
-So, welcome aboard! 👋 Get ready to dive into an exciting learning experience where you'll discover how to deploy a smart contract on the Open Campus Codex chain. With every step of your journey, you’ll not only learn but also unlock earning opportunities, all while keeping everything trackable on the blockchain! 
+¡Bienvenido a bordo! 👋 Prepárate para sumergirte en una experiencia de aprendizaje emocionante, donde descubrirás cómo desplegar un contrato inteligente en la cadena Open Campus Codex. Con cada paso de tu viaje, no solo aprenderás, sino que también desbloquearás oportunidades de ganar, ¡todo mientras mantienes todo rastreable en la blockchain!
 
-All the resources and content you need are available right here: [GitHub Repository](https://github.com/5208980/pol-template). Happy learning, and let’s make this journey unforgettable!
+Todos los recursos y contenido que necesitas están disponibles aquí mismo: [Repositorio de GitHub](https://github.com/5208980/pol-template). ¡Feliz aprendizaje y hagamos de este viaje algo inolvidable!
 
-### Explore the Template on POL
+### Explora la Plantilla en POL
 
-All sections and guides in this template are crafted as Markdown files located in the `/content` folder. This setup makes it super easy to customize and expand upon the content as you create your own exciting quests and learning resources! 📚✨
+Todas las secciones y guías de esta plantilla están creadas como archivos Markdown ubicados en la carpeta `/content`. ¡Esta configuración hace que sea súper fácil personalizar y ampliar el contenido mientras creas tus propias misiones y recursos de aprendizaje emocionantes! 📚✨
 
-The template also includes a pre-configured quest structure to get you started. You can find the quest configuration file [here](https://github.com/5208980/pol-template/blob/master/quest.config.json). Feel free to tweak it to suit your specific needs and let your creativity shine!
+La plantilla también incluye una estructura de misión preconfigurada para que empieces. Puedes encontrar el archivo de configuración de la misión [aquí](https://github.com/5208980/pol-template/blob/master/quest.config.json). Siéntete libre de modificarlo para adaptarlo a tus necesidades específicas y deja que tu creatividad brille.
 
-Happy exploring, and enjoy building your learning adventures and explore the following few content to deploy **interactively** deploy a smart contract and mint a POL POAP!
+¡Feliz exploración, disfruta construyendo tus aventuras de aprendizaje y explora el contenido siguiente para desplegar **interactivamente** un contrato inteligente y acuñar un POL POAP!

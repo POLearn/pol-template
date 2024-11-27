@@ -1,25 +1,25 @@
-# Basic Solidity Types
+# Tipos Básicos de Solidity
 
-### Introduction
+### Introducción
 
-Let’s dive into the fundamental building blocks of smart contracts by exploring basic contract variables that define their state and behavior!
+¡Vamos a sumergirnos en los bloques fundamentales de los contratos inteligentes explorando las variables básicas del contrato que definen su estado y comportamiento!
 
-In Solidity, variables are statically typed, meaning you must define their type upon declaration, ensuring clarity and structure in your smart contracts. These variables can take on default values based on their type, and Solidity offers a range of elementary types, from integers and booleans to addresses and custom structures, enabling you to model complex data effectively.
+En Solidity, las variables son de tipo estático, lo que significa que debes definir su tipo al declararlas, asegurando claridad y estructura en tus contratos inteligentes. Estas variables pueden tomar valores predeterminados según su tipo, y Solidity ofrece una variedad de tipos elementales, desde enteros y booleanos hasta direcciones y estructuras personalizadas, permitiéndote modelar datos complejos de manera efectiva.
 
-**Examples of Solidity Types**
+**Ejemplos de Tipos de Solidity**
 
--   **uint**: Unsigned integer
--   **int**: Signed integer
--   **bool**: Boolean value
--   **address**: Ethereum address
--   **string**: String of text
--   **bytes**: Fixed-size byte array
--   **struct**: Custom data structure
--   **enum**: User-defined type for enumerated values
+-   **uint**: Entero sin signo
+-   **int**: Entero con signo
+-   **bool**: Valor booleano
+-   **address**: Dirección de Ethereum
+-   **string**: Cadena de texto
+-   **bytes**: Arreglo de bytes de tamaño fijo
+-   **struct**: Estructura de datos personalizada
+-   **enum**: Tipo definido por el usuario para valores enumerados
 
 ### uint
 
-An unsigned integer that can represent non-negative whole numbers, allowing for larger values without the risk of negative numbers.  
+Un entero sin signo que puede representar números enteros no negativos, lo que permite valores más grandes sin el riesgo de números negativos.
 
   ```solidity
   uint256 count = 10; 
@@ -27,14 +27,15 @@ An unsigned integer that can represent non-negative whole numbers, allowing for 
 
 ### int
 
-A signed integer that can represent both positive and negative whole numbers, useful for calculations requiring a range of values. 
+Un entero con signo que puede representar tanto números enteros positivos como negativos, útil para cálculos que requieren un rango de valores.
 
   ```solidity
   int256 balance = -50; 
   ```
 
 ### bool
-A Boolean value that can be either `true` or `false`, commonly used for conditional statements and flags.
+
+Un valor booleano que puede ser `true` o `false`, comúnmente utilizado para declaraciones condicionales y banderas.
 
   ```solidity
   bool isActive = true; 
@@ -42,7 +43,7 @@ A Boolean value that can be either `true` or `false`, commonly used for conditio
 
 ### address
 
-A data type that represents an Ethereum address, crucial for identifying accounts and smart contracts on the blockchain. 
+Un tipo de datos que representa una dirección de Ethereum, crucial para identificar cuentas y contratos inteligentes en la blockchain.
 
   ```solidity
   address owner = 0x1234567890abcdef1234567890abcdef12345678; 
@@ -50,34 +51,34 @@ A data type that represents an Ethereum address, crucial for identifying account
 
 ### string
 
-A dynamic sequence of characters used to store text, allowing for flexible and varying lengths of string data.  
+Una secuencia dinámica de caracteres utilizada para almacenar texto, permitiendo longitudes flexibles y variables de datos de texto.
 
 ```solidity
-  string greeting = "Hello, blockchain!"; 
+  string greeting = "¡Hola, blockchain!"; 
   ```
 
 ### bytes
 
-A fixed-size byte array used to store raw binary data, providing a way to manage data at the byte level efficiently.
+Un arreglo de bytes de tamaño fijo utilizado para almacenar datos binarios sin procesar, proporcionando una manera eficiente de gestionar datos a nivel de bytes.
 
 ```solidity
   bytes32 data = 0xabcdefabcdefabcdefabcdefabcdefabcdefabcdef; 
   ```
 
-> 👀 Solidity offers several basic variable types, each with its own default value: **`uint`** (unsigned integer) defaults to `0`, **`int`** (signed integer) also defaults to `0`, **`bool`** (Boolean) defaults to `false`, **`address`** initializes to the zero address (`0x0000000000000000000000000000000000000000`), **`string`** defaults to an empty string (`""`), and **`bytes`** defaults to an empty byte array. For example:
+> 👀 Solidity ofrece varios tipos básicos de variables, cada una con su valor predeterminado: **`uint`** (entero sin signo) se inicializa a `0`, **`int`** (entero con signo) también se inicializa a `0`, **`bool`** (booleano) se inicializa a `false`, **`address`** se inicializa a la dirección cero (`0x0000000000000000000000000000000000000000`), **`string`** se inicializa a una cadena vacía (`""`), y **`bytes`** se inicializa a un arreglo de bytes vacío. Por ejemplo:
 > ```solidity
-> uint256 count;        // Default: 0
-> int256 balance;       // Default: 0
-> bool isActive;        // Default: false
-> address owner;        // Default: 0x000...
-> string greeting;      // Default: ""
-> bytes32 data;         // Default: ""
+> uint256 count;        // Predeterminado: 0
+> int256 balance;       // Predeterminado: 0
+> bool isActive;        // Predeterminado: false
+> address owner;        // Predeterminado: 0x000...
+> string greeting;      // Predeterminado: ""
+> bytes32 data;         // Predeterminado: ""
 > ```
 
-### Task 📝
+### Tarea 📝
 
-With the `SimpleContract` compiled, add a public string variable named `name` that anyone can access:
+Con el `SimpleContract` compilado, añade una variable pública de tipo string llamada `name` que cualquiera pueda acceder:
 
 ```solidity
-string public name; // This variable will store the name
+string public name; // Esta variable almacenará el nombre
 ```

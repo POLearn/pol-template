@@ -1,44 +1,44 @@
-# Setting up a Smart Contract
+# Configuración de un Contrato Inteligente
 
-### Introduction 
+### Introducción
 
-In this section, we'll go over the basic structure of a smart contract, that allows automate agreements and transactions on the blockchain, paving the way for innovative decentralized applications!
+En esta sección, repasaremos la estructura básica de un contrato inteligente, que permite automatizar acuerdos y transacciones en la blockchain, ¡abriendo el camino para aplicaciones descentralizadas innovadoras!
 
-### License Identifier
+### Identificador de Licencia
 
 ```solidity
 // SPDX-License-Identifier: MIT
 ```
 
-Typically, the first line is a **License Identifier**, which is optional but a good practice. By using the MIT license, we encourage others to freely use and modify our smart contract while clarifying the legal permissions involved, fostering collaboration in the blockchain community.
+Típicamente, la primera línea es un **Identificador de Licencia**, que es opcional, pero una buena práctica. Al usar la licencia MIT, animamos a otros a utilizar y modificar libremente nuestro contrato inteligente, al mismo tiempo que aclaramos los permisos legales involucrados, fomentando la colaboración en la comunidad blockchain.
 
-### Pragma Directive
+### Directiva Pragma
 
-The **pragma directive** specifies the Solidity compiler version to use:
+La **directiva pragma** especifica la versión del compilador de Solidity a utilizar:
 
 ```solidity
 pragma solidity ^0.8.20;
 ```
 
-In this case, `^0.8.20` ensures the contract is compiled with version 0.8.20 or newer versions that don't introduce breaking changes. This helps maintain compatibility and ensures your contract works as expected.
+En este caso, `^0.8.20` asegura que el contrato se compile con la versión 0.8.20 o versiones más recientes que no introduzcan cambios incompatibles. Esto ayuda a mantener la compatibilidad y garantiza que el contrato funcione como se espera.
 
-### Contract Declaration
+### Declaración del Contrato
 
-This snippet defines a basic smart contract named `SimpleContract`. The `contract` keyword is used to declare a new contract in Solidity, which serves as a blueprint for creating instances of that contract on the blockchain.
+Este fragmento define un contrato básico llamado `SimpleContract`. La palabra clave `contract` se usa para declarar un nuevo contrato en Solidity, que sirve como plantilla para crear instancias de ese contrato en la blockchain.
 
-Inside the curly braces, indicated by `{}`, is where all the logic and functionality of the contract will be implemented. This can include state variables, functions, and any other elements needed to define the contract's behavior.
+Dentro de las llaves `{}`, es donde se implementará toda la lógica y funcionalidad del contrato. Esto puede incluir variables de estado, funciones y cualquier otro elemento necesario para definir el comportamiento del contrato.
 
 ```solidity
 contract SimpleContract { 
-	// All the logic goes in here :) 
+	// Toda la lógica va aquí :) 
 }
 ```
 
-### Compiling the contract
+### Compilando el Contrato
 
-To compile your smart contract, selecting the correct version of the Solidity compiler that matches the pragma directive, such as `pragma solidity ^0.8.20;`, is essential. Choosing a compatible version, like **0.8.20** or newer, ensures successful compilation that generates:
+Para compilar tu contrato inteligente, es esencial seleccionar la versión correcta del compilador de Solidity que coincida con la directiva pragma, como `pragma solidity ^0.8.20;`. Elegir una versión compatible, como **0.8.20** o más reciente, asegura una compilación exitosa que genera:
 
--   🛠️ **Bytecode** for deployment on the blockchain
--   📡 **Application Binary Interface (ABI)** for interacting with the contract's functions and events
+-   🛠️ **Bytecode** para el despliegue en la blockchain
+-   📡 **Interfaz Binaria de Aplicación (ABI)** para interactuar con las funciones y eventos del contrato
 
-In conclusion, using the right compiler version is vital for your smart contract's deployment and functionality.
+En conclusión, usar la versión correcta del compilador es crucial para el despliegue y funcionamiento de tu contrato inteligente.
