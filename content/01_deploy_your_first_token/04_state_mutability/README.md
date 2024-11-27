@@ -1,21 +1,41 @@
-# State Mutability
+# Tính Tương Thích Trạng Thái (State Mutability)
 
-### Introduction
+### Giới Thiệu
 
-State mutability in Solidity specifies how a function interacts with the contract's state and the blockchain. Understanding state mutability is crucial for optimizing gas usage and ensuring that functions behave as intended. 
+Tính tương thích trạng thái trong Solidity chỉ ra cách mà một hàm tương tác với trạng thái của hợp đồng và blockchain. Hiểu rõ về tính tương thích trạng thái là rất quan trọng để tối ưu hóa việc sử dụng gas và đảm bảo các hàm hoạt động như mong muốn.
 
-There are three primary types of state mutability in Solidity: `pure`, `view`, and `nonpayable`.
+Có ba loại tính tương thích trạng thái chính trong Solidity: `pure`, `view`, và `nonpayable`.
 
 ### Pure
 
-A `pure` function indicates that it does not read or modify the contract's state. It solely relies on its input parameters and is typically used for computations.
+Hàm `pure` chỉ ra rằng hàm đó không đọc hoặc sửa đổi trạng thái của hợp đồng. Nó chỉ dựa vào các tham số đầu vào của mình và thường được sử dụng cho các phép toán tính toán.
+
+```solidity
+function add(uint a, uint b) public pure returns (uint) {
+    return a + b;
+}
+```
 
 ### View
 
-A `view` function allows reading the contract's state but prohibits any modifications. It can be used to access data stored in the contract without changing it.
+Hàm `view` cho phép đọc trạng thái của hợp đồng nhưng không cho phép sửa đổi bất kỳ thứ gì. Nó có thể được sử dụng để truy xuất dữ liệu được lưu trữ trong hợp đồng mà không thay đổi chúng.
+
+```solidity
+function getBalance() public view returns (uint) {
+    return balance;
+}
+```
 
 ### Nonpayable
 
-A `nonpayable` function can modify the contract's state and allows for receiving Ether but does not accept any Ether during the call. It is the default state mutability if none is specified.
+Hàm `nonpayable` có thể sửa đổi trạng thái của hợp đồng và cho phép nhận Ether, nhưng không chấp nhận Ether trong suốt cuộc gọi hàm. Đây là tính tương thích trạng thái mặc định nếu không có tính tương thích nào được chỉ định.
 
-By using the correct state mutability for your functions, you can ensure clarity in their behavior and optimize gas costs for your contract's interactions.
+```solidity
+function setBalance(uint _balance) public {
+    balance = _balance;
+}
+```
+
+### Tóm Tắt
+
+Bằng cách sử dụng tính tương thích trạng thái phù hợp cho các hàm của bạn, bạn có thể đảm bảo rõ ràng về cách thức hoạt động của chúng và tối ưu hóa chi phí gas cho các tương tác của hợp đồng.

@@ -1,42 +1,42 @@
-# Functions
+# Các Hàm trong Solidity
 
-### Introduction
+### Giới Thiệu
 
-Now that we have a contract set up with some state variables, let's dive into how we can use functions to interact with them
+Bây giờ khi chúng ta đã thiết lập một hợp đồng với một số biến trạng thái, hãy cùng tìm hiểu cách sử dụng các hàm để tương tác với chúng.
 
-### Function Definition
+### Định Nghĩa Hàm
 
-Before we can use a function in our `SimpleContract`, we need to define it. In Solidity, functions are defined using the `function` keyword, followed by a unique function name, an optional list of parameters, and a statement block enclosed in curly braces. A basic **syntax** is,
+Trước khi chúng ta có thể sử dụng một hàm trong `SimpleContract`, chúng ta cần phải định nghĩa nó. Trong Solidity, các hàm được định nghĩa bằng từ khóa `function`, theo sau là tên hàm độc đáo, một danh sách tham số tùy chọn và một khối câu lệnh được bao trong dấu ngoặc nhọn. Cú pháp cơ bản là:
 
 ```solidity
-function functionName(int arg1, string memory arg2, ...) visisbility stateMutilability returns() {
-   // Logics goes here :)
+function functionName(int arg1, string memory arg2, ...) visibility stateMutability returns() {
+   // Logic đi vào đây :)
 }
 ```
 
-### Function Name
+### Tên Hàm
 
-This declares the function with a unique name (`functionName`), which is how you will call it.
+Đoạn mã này khai báo hàm với tên độc đáo (`functionName`), đây là cách bạn sẽ gọi hàm đó.
 
-### Parameters
+### Tham Số
 
-This part specifies the function's parameters, where `arg1` is an integer and `arg2` is a string stored in memory; additional parameters can be included as needed.
+Phần này chỉ ra tham số của hàm, trong đó `arg1` là một số nguyên và `arg2` là một chuỗi được lưu trữ trong bộ nhớ; các tham số bổ sung có thể được thêm vào khi cần.
 
-### Visibility
+### Quyền Truy Cập
 
-This defines the access level of the function, such as `public`, `private`, or `internal`, determining who can call the function.
+Điều này xác định mức độ truy cập của hàm, chẳng hạn như `public`, `private`, hoặc `internal`, quyết định ai có thể gọi hàm.
 
-### State Mutability
+### Tính Chất Biến Trạng Thái
 
-> ⚠️**Note:** We'll be going over the concept of scope in the next resource!
+> ⚠️**Lưu ý:** Chúng ta sẽ tìm hiểu về khái niệm phạm vi (scope) trong tài nguyên tiếp theo!
 
-This indicates whether the function can modify the contract's state (e.g., `pure`, `view`, or `nonpayable`), affecting how it interacts with the blockchain.
+Điều này chỉ ra liệu hàm có thể sửa đổi trạng thái của hợp đồng hay không (ví dụ: `pure`, `view`, hoặc `nonpayable`), ảnh hưởng đến cách nó tương tác với blockchain.
 
-### Return Types
+### Kiểu Trả Về
 
-This specifies the return type of the function, indicating what value it will output when called; the parentheses can contain the type if the function returns a value.
+Điều này chỉ ra kiểu trả về của hàm, xác định giá trị mà hàm sẽ trả khi được gọi; dấu ngoặc đơn có thể chứa kiểu trả về nếu hàm trả về một giá trị.
 
-For example, `returns(uint)` means the function will return an unsigned integer.
+Ví dụ, `returns(uint)` có nghĩa là hàm sẽ trả về một số nguyên không dấu.
 
 ```solidity
 function getValue() public view returns(uint) {
@@ -44,12 +44,12 @@ function getValue() public view returns(uint) {
 }
 ```
 
-### Task 📝
+### Nhiệm Vụ 📝
 
-Add the following function to your `SimpleContract` to allow users to set the `name` state variable:
+Thêm hàm sau vào `SimpleContract` để cho phép người dùng thiết lập biến trạng thái `name`:
 
 ```solidity
 function set(string memory _name) public;
 ```
 
-This function takes a string parameter `_name` and updates the `name` variable in the contract.
+Hàm này nhận một tham số chuỗi `_name` và cập nhật biến `name` trong hợp đồng.

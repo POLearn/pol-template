@@ -1,25 +1,25 @@
-# Basic Solidity Types
+# Các Kiểu Dữ Liệu Cơ Bản trong Solidity
 
-### Introduction
+### Giới Thiệu
 
-Let’s dive into the fundamental building blocks of smart contracts by exploring basic contract variables that define their state and behavior!
+Hãy cùng khám phá các khối xây dựng cơ bản của hợp đồng thông minh bằng cách tìm hiểu về các biến cơ bản trong hợp đồng, chúng định nghĩa trạng thái và hành vi của hợp đồng!
 
-In Solidity, variables are statically typed, meaning you must define their type upon declaration, ensuring clarity and structure in your smart contracts. These variables can take on default values based on their type, and Solidity offers a range of elementary types, from integers and booleans to addresses and custom structures, enabling you to model complex data effectively.
+Trong Solidity, các biến được xác định kiểu tĩnh, có nghĩa là bạn phải chỉ định kiểu dữ liệu khi khai báo, đảm bảo tính rõ ràng và cấu trúc cho các hợp đồng thông minh. Các biến này có thể nhận giá trị mặc định dựa trên kiểu dữ liệu của chúng, và Solidity cung cấp một loạt các kiểu dữ liệu cơ bản, từ số nguyên và Boolean cho đến địa chỉ và cấu trúc tùy chỉnh, giúp bạn mô hình hóa dữ liệu phức tạp một cách hiệu quả.
 
-**Examples of Solidity Types**
+**Các Ví Dụ về Các Kiểu Dữ Liệu Solidity**
 
--   **uint**: Unsigned integer
--   **int**: Signed integer
--   **bool**: Boolean value
--   **address**: Ethereum address
--   **string**: String of text
--   **bytes**: Fixed-size byte array
--   **struct**: Custom data structure
--   **enum**: User-defined type for enumerated values
+-   **uint**: Số nguyên không dấu
+-   **int**: Số nguyên có dấu
+-   **bool**: Giá trị Boolean
+-   **address**: Địa chỉ Ethereum
+-   **string**: Chuỗi văn bản
+-   **bytes**: Mảng byte cố định kích thước
+-   **struct**: Cấu trúc dữ liệu tùy chỉnh
+-   **enum**: Kiểu dữ liệu do người dùng định nghĩa cho các giá trị liệt kê
 
 ### uint
 
-An unsigned integer that can represent non-negative whole numbers, allowing for larger values without the risk of negative numbers.  
+Một số nguyên không dấu, có thể biểu diễn các số nguyên không âm, cho phép giá trị lớn hơn mà không gặp phải vấn đề về số âm.
 
   ```solidity
   uint256 count = 10; 
@@ -27,14 +27,15 @@ An unsigned integer that can represent non-negative whole numbers, allowing for 
 
 ### int
 
-A signed integer that can represent both positive and negative whole numbers, useful for calculations requiring a range of values. 
+Một số nguyên có dấu, có thể biểu diễn cả số dương và số âm, hữu ích cho các phép tính yêu cầu một phạm vi giá trị.
 
   ```solidity
   int256 balance = -50; 
   ```
 
 ### bool
-A Boolean value that can be either `true` or `false`, commonly used for conditional statements and flags.
+
+Giá trị Boolean có thể là `true` hoặc `false`, thường được sử dụng trong các câu lệnh điều kiện và cờ hiệu.
 
   ```solidity
   bool isActive = true; 
@@ -42,7 +43,7 @@ A Boolean value that can be either `true` or `false`, commonly used for conditio
 
 ### address
 
-A data type that represents an Ethereum address, crucial for identifying accounts and smart contracts on the blockchain. 
+Kiểu dữ liệu đại diện cho một địa chỉ Ethereum, rất quan trọng để xác định các tài khoản và hợp đồng thông minh trên blockchain.
 
   ```solidity
   address owner = 0x1234567890abcdef1234567890abcdef12345678; 
@@ -50,7 +51,7 @@ A data type that represents an Ethereum address, crucial for identifying account
 
 ### string
 
-A dynamic sequence of characters used to store text, allowing for flexible and varying lengths of string data.  
+Một chuỗi ký tự động, được sử dụng để lưu trữ văn bản, cho phép dữ liệu chuỗi có độ dài linh hoạt và thay đổi.
 
 ```solidity
   string greeting = "Hello, blockchain!"; 
@@ -58,26 +59,27 @@ A dynamic sequence of characters used to store text, allowing for flexible and v
 
 ### bytes
 
-A fixed-size byte array used to store raw binary data, providing a way to manage data at the byte level efficiently.
+Một mảng byte có kích thước cố định được sử dụng để lưu trữ dữ liệu nhị phân thô, cung cấp cách quản lý dữ liệu ở cấp độ byte một cách hiệu quả.
 
 ```solidity
   bytes32 data = 0xabcdefabcdefabcdefabcdefabcdefabcdefabcdef; 
   ```
 
-> 👀 Solidity offers several basic variable types, each with its own default value: **`uint`** (unsigned integer) defaults to `0`, **`int`** (signed integer) also defaults to `0`, **`bool`** (Boolean) defaults to `false`, **`address`** initializes to the zero address (`0x0000000000000000000000000000000000000000`), **`string`** defaults to an empty string (`""`), and **`bytes`** defaults to an empty byte array. For example:
-> ```solidity
-> uint256 count;        // Default: 0
-> int256 balance;       // Default: 0
-> bool isActive;        // Default: false
-> address owner;        // Default: 0x000...
-> string greeting;      // Default: ""
-> bytes32 data;         // Default: ""
-> ```
-
-### Task 📝
-
-With the `SimpleContract` compiled, add a public string variable named `name` that anyone can access:
+> 👀 Solidity cung cấp nhiều kiểu biến cơ bản, mỗi kiểu có giá trị mặc định riêng: **`uint`** (số nguyên không dấu) mặc định là `0`, **`int`** (số nguyên có dấu) cũng mặc định là `0`, **`bool`** (Boolean) mặc định là `false`, **`address`** khởi tạo là địa chỉ không có giá trị (`0x0000000000000000000000000000000000000000`), **`string`** mặc định là chuỗi rỗng (`""`), và **`bytes`** mặc định là mảng byte rỗng. Ví dụ:
 
 ```solidity
-string public name; // This variable will store the name
+uint256 count;        // Mặc định: 0
+int256 balance;       // Mặc định: 0
+bool isActive;        // Mặc định: false
+address owner;        // Mặc định: 0x000...
+string greeting;      // Mặc định: ""
+bytes32 data;         // Mặc định: ""
+```
+
+### Nhiệm Vụ 📝
+
+Với hợp đồng `SimpleContract` đã được biên dịch, hãy thêm một biến chuỗi công khai có tên là `name` mà bất kỳ ai cũng có thể truy cập:
+
+```solidity
+string public name; // Biến này sẽ lưu trữ tên
 ```

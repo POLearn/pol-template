@@ -1,12 +1,12 @@
-# Leveling Up: Deploying an ERC20 Token
+# Cấp Độ Tiếp Theo: Triển Khai Token ERC20
 
-Now that you've successfully deployed and interacted with your first smart contract, it’s time to take things up a notch! In this next part, we’ll guide you through deploying your own ERC20 token, using OpenZeppelin’s battle-tested ERC20🪙 implementation. Let’s get started on creating your very own token on the Open Campus Codex network
+Bây giờ bạn đã thành công trong việc triển khai và tương tác với smart contract đầu tiên, đã đến lúc nâng cấp! Trong phần này, chúng ta sẽ hướng dẫn bạn triển khai token ERC20 của riêng bạn, sử dụng việc triển khai ERC20 🪙 đã được kiểm chứng của OpenZeppelin. Hãy bắt đầu tạo token của bạn trên mạng Open Campus Codex!
 
-### What is OpenZeppelin?
+### OpenZeppelin là gì?
 
-OpenZeppelin is a library for secure smart contract development. It provides implementations of popular token standards, including ERC20, which you can use to create your own tokens without having to reinvent the wheel. Using OpenZeppelin's implementations ensures that your token adheres to best practices and standards in the Ethereum ecosystem.
+OpenZeppelin là một thư viện phát triển smart contract an toàn. Nó cung cấp các triển khai của các tiêu chuẩn token phổ biến, bao gồm ERC20, mà bạn có thể sử dụng để tạo token của riêng mình mà không cần phải làm lại từ đầu. Sử dụng các triển khai của OpenZeppelin đảm bảo rằng token của bạn tuân thủ các thực tiễn và tiêu chuẩn tốt nhất trong hệ sinh thái Ethereum.
 
-From understanding the basic structure of the contract, let create a `SampleERCToken`
+Từ việc hiểu cấu trúc cơ bản của hợp đồng, chúng ta sẽ tạo ra một token `SampleERCToken`.
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -16,24 +16,23 @@ contract SampleERCToken {
 }
 ```
 
+### Nhập OpenZeppelin ERC20
 
-### Import OpenZeppelin ERC20
-
-In your `TokenPoken.sol` file, start by importing OpenZeppelin’s ERC20 implementation with the following statement:
+Trong file `TokenPoken.sol` của bạn, bắt đầu bằng việc nhập triển khai ERC20 của OpenZeppelin với câu lệnh sau:
 
 ```solidity
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 ```
 
-This allows you to inherit the ERC20 contract and build your token on top of it. OpenZeppelin provides a secure, battle-tested foundation for ERC20 tokens.
+Điều này cho phép bạn kế thừa hợp đồng ERC20 và xây dựng token của mình dựa trên đó. OpenZeppelin cung cấp một nền tảng an toàn và đã được kiểm chứng cho các token ERC20.
 
-### Write the Token Contract
+### Viết Hợp Đồng Token
 
-Next, define your ERC20 token by writing the contract code. Use the name "TokenPoken" and symbol "TP" as arguments to the ERC20 constructor. Make sure the constructor is empty, only calling the `ERC20` constructor:
+Tiếp theo, hãy định nghĩa token ERC20 của bạn bằng cách viết mã hợp đồng. Sử dụng tên "TokenPoken" và ký hiệu "TP" làm đối số cho constructor ERC20. Đảm bảo rằng constructor là rỗng, chỉ gọi constructor `ERC20`:
 
-For more details on the ERC20 contract, refer to the [OpenZeppelin documentation](https://docs.openzeppelin.com/contracts/4.x/erc20) to understand its features and functionality.
+Để biết thêm chi tiết về hợp đồng ERC20, hãy tham khảo [tài liệu của OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/erc20) để hiểu các tính năng và chức năng của nó.
 
-Here's a head start,
+Dưới đây là mã bắt đầu:
 
 ```solidity
 contract SampleERCToken is ERC20 { 
@@ -41,26 +40,26 @@ contract SampleERCToken is ERC20 {
 }
 ```
 
-This code defines the basic structure of your token, using OpenZeppelin's contract for security and ease.
+Mã này định nghĩa cấu trúc cơ bản của token của bạn, sử dụng hợp đồng của OpenZeppelin để đảm bảo an toàn và dễ dàng.
 
-### Compile the Contract
+### Biên Dịch Hợp Đồng
 
-To compile, open your Solidity IDE and select the **0.8.23** compiler version. Click "Compile" to ensure there are no errors, and a green checkmark should confirm successful compilation.
+Để biên dịch, mở IDE Solidity của bạn và chọn phiên bản biên dịch **0.8.23**. Nhấn "Compile" để đảm bảo không có lỗi, và một dấu tích màu xanh lá cây sẽ xác nhận biên dịch thành công.
 
-### Deploy the Contract
+### Triển Khai Hợp Đồng
 
-If you are using the Solide IDE, in the **Build & Deploy Tab**, select the the `SampleERCToken` and click on **Deploy**
+Nếu bạn đang sử dụng Solide IDE, trong **Tab Build & Deploy**, chọn `SampleERCToken` và nhấn **Deploy**.
 
-### Testing Your Token
+### Kiểm Tra Token
 
-Once your `TokenPoken` contract is deployed, you can interact with its inherited ERC20 functions. Here are a few actions to try:
+Sau khi hợp đồng `TokenPoken` của bạn được triển khai, bạn có thể tương tác với các hàm ERC20 đã kế thừa. Dưới đây là một số hành động để thử:
 
-- 🧮 **Check Total Supply:** Call `totalSupply` to view the total TokenPoken tokens.
-- 👛 **Check Your Balance:** Use `balanceOf` with your address to see your token balance.
-- 🔄 **Transfer Tokens:** Try the `transfer` function to send tokens to another wallet.
+- 🧮 **Kiểm tra Tổng Cung:** Gọi `totalSupply` để xem tổng số token TokenPoken.
+- 👛 **Kiểm tra Số Dư của Bạn:** Sử dụng `balanceOf` với địa chỉ của bạn để xem số dư token của bạn.
+- 🔄 **Chuyển Token:** Thử sử dụng hàm `transfer` để gửi token đến ví khác.
 
-### ❗Submit the Deployment to Proof of Learn
+### ❗ Nộp Giao Dịch lên Proof of Learn
 
-If you deployed a `SimpleContract` earlier, you can do the same for `SimpleERCToken`. Congratulations! You've successfully created and deployed your own ERC20 token called TokenPoken with the symbol TP using OpenZeppelin's ERC20 contract. This exercise demonstrates the power and ease of using OpenZeppelin for secure and standardized smart contract development.
+Nếu bạn đã triển khai `SimpleContract` trước đó, bạn có thể làm điều tương tự với `SampleERCToken`. Chúc mừng! Bạn đã thành công trong việc tạo và triển khai token ERC20 của riêng mình có tên là TokenPoken với ký hiệu TP, sử dụng hợp đồng ERC20 của OpenZeppelin. Bài tập này chứng minh sức mạnh và sự dễ dàng khi sử dụng OpenZeppelin để phát triển smart contract an toàn và chuẩn hóa.
 
-Make sure you claim for **FREE POL POAP** from Proof of Learn, showcasing you deployed and interact smart contract on Open Campus Codex! 🎉🎉🎉
+Hãy chắc chắn nhận **FREE POL POAP** từ Proof of Learn, chứng nhận bạn đã triển khai và tương tác với smart contract trên Open Campus Codex! 🎉🎉🎉

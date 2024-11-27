@@ -1,43 +1,43 @@
-# Deploy a Smart Contract
+# Triển khai một Smart Contract
 
-### Introduction
+### Giới thiệu
 
-Having covered the fundamentals of Solidity, including contract structure, state variables, function definitions, and state mutability, it's now time to deploy the `SimpleContract` contract! 🚀
+Sau khi đã tìm hiểu về các kiến thức cơ bản của Solidity, bao gồm cấu trúc hợp đồng, biến trạng thái, định nghĩa hàm và tính biến đổi trạng thái, bây giờ là lúc để triển khai hợp đồng **SimpleContract**! 🚀
 
-### Adding the Open Campus Codex Network
+### Thêm mạng Open Campus Codex
 
-To deploy your contract to the Open Campus Codex network, you'll need to add this custom network to MetaMask. Follow the steps below and use the details provided in the table:
+Để triển khai hợp đồng của bạn lên mạng Open Campus Codex, bạn cần thêm mạng tùy chỉnh này vào MetaMask. Làm theo các bước dưới đây và sử dụng các thông tin được cung cấp trong bảng:
 
-1. Open MetaMask and click on the network dropdown at the top.
-2. Select "Add Network" and fill in the following details:
+1. Mở MetaMask và nhấp vào danh sách thả xuống mạng ở trên cùng.
+2. Chọn "Add Network" và điền thông tin sau:
 
-| **Field**            | **Details**                                  |
-|----------------------|----------------------------------------------|
-| **Network Name**      | Open Campus Codex                            |
-| **New RPC URL**       | `https://open-campus-codex-sepolia.drpc.org` |
-| **Chain ID**          | `656476`                                     |
-| **Currency Symbol**   | `EDU`                                        |
-| **Block Explorer URL**| `https://opencampus-codex.blockscout.com/`   |
+| **Trường**            | **Chi tiết**                                  |
+|-----------------------|-----------------------------------------------|
+| **Tên Mạng**          | Open Campus Codex                            |
+| **URL RPC Mới**       | https://open-campus-codex-sepolia.drpc.org    |
+| **Chain ID**          | 656476                                        |
+| **Biểu Tượng Tiền Tệ**| EDU                                           |
+| **URL Trình Duyệt Khối**| https://opencampus-codex.blockscout.com/    |
 
-Once you've added these details, you'll be connected to the Open Campus Codex network and ready to deploy your contract! 🎉
+Sau khi bạn thêm các thông tin này, bạn sẽ kết nối với mạng Open Campus Codex và sẵn sàng triển khai hợp đồng! 🎉
 
-### Compile the Contract
+### Biên dịch Hợp đồng
 
-- Set your Solidity compiler version to **0.8.23**.
-- Compile the `SimpleContract` from the earlier example.
+- Đặt phiên bản biên dịch Solidity của bạn thành **0.8.23**.
+- Biên dịch hợp đồng **SimpleContract** từ ví dụ trước.
 
-### Deploy the Contract
+### Triển khai Hợp đồng
 
-- After compilation, deploy the `SimpleContract` to the Open Campus Codex network. MetaMask will prompt you to approve the transaction for deployment.
+- Sau khi biên dịch, triển khai hợp đồng **SimpleContract** lên mạng Open Campus Codex. MetaMask sẽ yêu cầu bạn xác nhận giao dịch để triển khai.
 
-Once the transaction is confirmed, your contract is successfully deployed!
+Sau khi giao dịch được xác nhận, hợp đồng của bạn sẽ được triển khai thành công!
 
-Congratulations! You've successfully configured MetaMask for the Open Campus Codex network, deployed a Solidity contract, and now can interacted with it. 🎉
+🎉 **Chúc mừng!** Bạn đã cấu hình MetaMask cho mạng Open Campus Codex, triển khai hợp đồng Solidity và giờ đây có thể tương tác với hợp đồng đó! 🎉
 
-### ❗Submit the Deployment to Proof of Learn
+### ❗ Nộp Triển khai lên Proof of Learn
 
-To complete this quest on POL, submit your deployed contract transaction to the Proof of Learn (POL) platform. This confirms that you've successfully deployed the contract. You can earn yourself a 🏆**POL POAP**.
- 
-### Conclusion
+Để hoàn thành nhiệm vụ này trên POL, hãy nộp giao dịch triển khai hợp đồng của bạn lên nền tảng Proof of Learn (POL). Điều này xác nhận rằng bạn đã triển khai hợp đồng thành công. Bạn sẽ nhận được 🏆 **POL POAP**.
 
-Now that your contract is deployed, it's time to dive deeper! In the next section, we'll explore how to interact with your deployed contract, update the `name` variable, and modify the contract state using its functions. Stay tuned⚡
+### Kết luận
+
+Bây giờ hợp đồng của bạn đã được triển khai, đã đến lúc đi sâu hơn nữa! Trong phần tiếp theo, chúng ta sẽ tìm hiểu cách tương tác với hợp đồng đã triển khai, cập nhật biến `name` và thay đổi trạng thái hợp đồng bằng cách sử dụng các hàm của nó. Hãy chờ đón⚡

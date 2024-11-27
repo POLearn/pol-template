@@ -1,15 +1,15 @@
-# Proof of Learn (POL) 3 Template
+# Mẫu Proof of Learn (POL) 3
 
-This template is your perfect starting point for creating engaging and interactive learning content on the **Proof of Learn (POL)** platform!
+Mẫu này là điểm khởi đầu lý tưởng để tạo nội dung học tập tương tác và thú vị trên nền tảng **Proof of Learn (POL)**!
 
-So, welcome aboard! 👋 Get ready to dive into an exciting learning experience where you'll discover how to deploy a smart contract on the Open Campus Codex chain. With every step of your journey, you’ll not only learn but also unlock earning opportunities, all while keeping everything trackable on the blockchain! 
+Vậy chào mừng bạn đến với! 👋 Sẵn sàng tham gia vào trải nghiệm học tập thú vị, nơi bạn sẽ khám phá cách triển khai một hợp đồng thông minh trên chuỗi Open Campus Codex. Với mỗi bước đi của bạn, bạn không chỉ học hỏi mà còn mở ra cơ hội kiếm tiền, tất cả đều được theo dõi trên blockchain!
 
-All the resources and content you need are available right here: [GitHub Repository](https://github.com/5208980/pol-template). Happy learning, and let’s make this journey unforgettable!
+Tất cả tài nguyên và nội dung bạn cần đều có sẵn tại đây: [GitHub Repository](https://github.com/5208980/pol-template). Chúc bạn học tập vui vẻ và hãy làm cho hành trình này trở nên khó quên!
 
-### Explore the Template on POL
+### Khám phá Mẫu trên POL
 
-All sections and guides in this template are crafted as Markdown files located in the `/content` folder. This setup makes it super easy to customize and expand upon the content as you create your own exciting quests and learning resources! 📚✨
+Tất cả các phần và hướng dẫn trong mẫu này đều được tạo thành các tệp Markdown nằm trong thư mục `/content`. Cấu hình này giúp bạn dễ dàng tùy chỉnh và mở rộng nội dung khi tạo các cuộc phiêu lưu học tập và tài nguyên thú vị của riêng mình! 📚✨
 
-The template also includes a pre-configured quest structure to get you started. You can find the quest configuration file [here](https://github.com/5208980/pol-template/blob/master/quest.config.json). Feel free to tweak it to suit your specific needs and let your creativity shine!
+Mẫu cũng bao gồm một cấu trúc nhiệm vụ được cấu hình sẵn để giúp bạn bắt đầu. Bạn có thể tìm tệp cấu hình nhiệm vụ [tại đây](https://github.com/5208980/pol-template/blob/master/quest.config.json). Hãy tự do điều chỉnh nó để phù hợp với nhu cầu cụ thể của bạn và để sáng tạo của bạn tỏa sáng!
 
-Happy exploring, and enjoy building your learning adventures and explore the following few content to deploy **interactively** deploy a smart contract and mint a POL POAP!
+Chúc bạn khám phá vui vẻ và tận hưởng việc xây dựng các cuộc phiêu lưu học tập của mình và khám phá các nội dung sau đây để triển khai **tương tác** một hợp đồng thông minh và đúc một POL POAP!
