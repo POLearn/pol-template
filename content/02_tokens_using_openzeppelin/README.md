@@ -1,12 +1,12 @@
-# Leveling Up: Deploying an ERC20 Token
+# 升级：部署一个 ERC20 代币
 
-Now that you've successfully deployed and interacted with your first smart contract, it’s time to take things up a notch! In this next part, we’ll guide you through deploying your own ERC20 token, using OpenZeppelin’s battle-tested ERC20🪙 implementation. Let’s get started on creating your very own token on the Open Campus Codex network
+现在，您已经成功部署并与第一个智能合约进行了交互，是时候更进一步了！在接下来的部分，我们将指导您通过 OpenZeppelin 提供的经过验证的 ERC20🪙 实现，来部署您自己的 ERC20 代币。让我们开始在 Open Campus Codex 网络上创建属于您的代币吧！
 
-### What is OpenZeppelin?
+### 什么是 OpenZeppelin？
 
-OpenZeppelin is a library for secure smart contract development. It provides implementations of popular token standards, including ERC20, which you can use to create your own tokens without having to reinvent the wheel. Using OpenZeppelin's implementations ensures that your token adheres to best practices and standards in the Ethereum ecosystem.
+OpenZeppelin 是一个安全智能合约开发库，提供了流行代币标准的实现，包括 ERC20，您可以使用这些实现来创建自己的代币，而无需重新发明轮子。使用 OpenZeppelin 的实现可以确保您的代币遵循 Ethereum 生态系统中的最佳实践和标准。
 
-From understanding the basic structure of the contract, let create a `SampleERCToken`
+从了解合约的基本结构开始，让我们创建一个 `SampleERCToken` 合约。
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -16,24 +16,23 @@ contract SampleERCToken {
 }
 ```
 
+### 导入 OpenZeppelin ERC20
 
-### Import OpenZeppelin ERC20
-
-In your `TokenPoken.sol` file, start by importing OpenZeppelin’s ERC20 implementation with the following statement:
+在您的 `TokenPoken.sol` 文件中，首先通过以下语句导入 OpenZeppelin 的 ERC20 实现：
 
 ```solidity
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 ```
 
-This allows you to inherit the ERC20 contract and build your token on top of it. OpenZeppelin provides a secure, battle-tested foundation for ERC20 tokens.
+这允许您继承 ERC20 合约并基于它构建您的代币。OpenZeppelin 提供了一个安全、经过验证的 ERC20 代币基础。
 
-### Write the Token Contract
+### 编写代币合约
 
-Next, define your ERC20 token by writing the contract code. Use the name "TokenPoken" and symbol "TP" as arguments to the ERC20 constructor. Make sure the constructor is empty, only calling the `ERC20` constructor:
+接下来，通过编写合约代码来定义您的 ERC20 代币。使用名称 "TokenPoken" 和符号 "TP" 作为 ERC20 构造函数的参数。确保构造函数为空，只调用 `ERC20` 构造函数：
 
-For more details on the ERC20 contract, refer to the [OpenZeppelin documentation](https://docs.openzeppelin.com/contracts/4.x/erc20) to understand its features and functionality.
+有关 ERC20 合约的更多详细信息，请参阅 [OpenZeppelin 文档](https://docs.openzeppelin.com/contracts/4.x/erc20)，以了解其功能和特性。
 
-Here's a head start,
+以下是一个起点：
 
 ```solidity
 contract SampleERCToken is ERC20 { 
@@ -41,26 +40,26 @@ contract SampleERCToken is ERC20 {
 }
 ```
 
-This code defines the basic structure of your token, using OpenZeppelin's contract for security and ease.
+这段代码定义了您的代币的基本结构，使用 OpenZeppelin 的合约来确保安全和简便。
 
-### Compile the Contract
+### 编译合约
 
-To compile, open your Solidity IDE and select the **0.8.23** compiler version. Click "Compile" to ensure there are no errors, and a green checkmark should confirm successful compilation.
+要进行编译，打开您的 Solidity IDE 并选择 **0.8.23** 编译器版本。点击“编译”，确保没有错误，并且绿色勾号应确认编译成功。
 
-### Deploy the Contract
+### 部署合约
 
-If you are using the Solide IDE, in the **Build & Deploy Tab**, select the the `SampleERCToken` and click on **Deploy**
+如果您使用的是 Solide IDE，在 **Build & Deploy Tab**（构建与部署标签）中，选择 `SampleERCToken` 并点击 **Deploy**（部署）。
 
-### Testing Your Token
+### 测试您的代币
 
-Once your `TokenPoken` contract is deployed, you can interact with its inherited ERC20 functions. Here are a few actions to try:
+一旦 `TokenPoken` 合约部署成功，您就可以与其继承的 ERC20 函数进行交互。以下是一些可以尝试的操作：
 
-- 🧮 **Check Total Supply:** Call `totalSupply` to view the total TokenPoken tokens.
-- 👛 **Check Your Balance:** Use `balanceOf` with your address to see your token balance.
-- 🔄 **Transfer Tokens:** Try the `transfer` function to send tokens to another wallet.
+- 🧮 **查看总供应量：** 调用 `totalSupply` 来查看 TokenPoken 的总供应量。
+- 👛 **查看您的余额：** 使用 `balanceOf` 并输入您的地址查看代币余额。
+- 🔄 **转账代币：** 尝试使用 `transfer` 函数将代币发送到另一个钱包。
 
-### ❗Submit the Deployment to Proof of Learn
+### ❗提交部署到 Proof of Learn
 
-If you deployed a `SimpleContract` earlier, you can do the same for `SimpleERCToken`. Congratulations! You've successfully created and deployed your own ERC20 token called TokenPoken with the symbol TP using OpenZeppelin's ERC20 contract. This exercise demonstrates the power and ease of using OpenZeppelin for secure and standardized smart contract development.
+如果您之前部署了 `SimpleContract`，现在可以对 `SimpleERCToken` 执行相同操作。恭喜！您已成功创建并部署了名为 TokenPoken、符号为 TP 的 ERC20 代币，使用 OpenZeppelin 的 ERC20 合约。这一练习展示了使用 OpenZeppelin 进行安全和标准化智能合约开发的强大与便捷。
 
-Make sure you claim for **FREE POL POAP** from Proof of Learn, showcasing you deployed and interact smart contract on Open Campus Codex! 🎉🎉🎉
+确保在 Proof of Learn 平台上领取 **免费 POL POAP**，展示您在 Open Campus Codex 上成功部署和交互智能合约的成就！ 🎉🎉🎉

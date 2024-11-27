@@ -1,21 +1,21 @@
-# State Mutability
+# 状态可变性  
 
-### Introduction
+### 介绍  
 
-State mutability in Solidity specifies how a function interacts with the contract's state and the blockchain. Understanding state mutability is crucial for optimizing gas usage and ensuring that functions behave as intended. 
+Solidity 中的状态可变性定义了函数如何与合约的状态和区块链交互。理解状态可变性对于优化 Gas 使用以及确保函数按预期运行至关重要。  
 
-There are three primary types of state mutability in Solidity: `pure`, `view`, and `nonpayable`.
+Solidity 中的状态可变性主要有三种类型：`pure`、`view` 和 `nonpayable`。  
 
-### Pure
+### Pure  
 
-A `pure` function indicates that it does not read or modify the contract's state. It solely relies on its input parameters and is typically used for computations.
+`pure` 函数表明它既不会读取也不会修改合约的状态。它仅依赖于输入参数，通常用于执行计算。  
 
-### View
+### View  
 
-A `view` function allows reading the contract's state but prohibits any modifications. It can be used to access data stored in the contract without changing it.
+`view` 函数允许读取合约的状态，但禁止进行任何修改。可以用来访问存储在合约中的数据，而不会对其进行更改。  
 
-### Nonpayable
+### Nonpayable  
 
-A `nonpayable` function can modify the contract's state and allows for receiving Ether but does not accept any Ether during the call. It is the default state mutability if none is specified.
+`nonpayable` 函数可以修改合约的状态，允许接收以太币，但在调用过程中不接受任何以太币。如果未指定状态可变性，则默认是 `nonpayable`。  
 
-By using the correct state mutability for your functions, you can ensure clarity in their behavior and optimize gas costs for your contract's interactions.
+通过为函数使用正确的状态可变性，您可以确保其行为清晰，同时优化合约交互的 Gas 成本。  

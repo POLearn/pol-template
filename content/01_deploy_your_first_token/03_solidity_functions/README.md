@@ -1,55 +1,55 @@
-# Functions
+# 函数  
 
-### Introduction
+### 介绍  
 
-Now that we have a contract set up with some state variables, let's dive into how we can use functions to interact with them
+现在我们已经设置了一个包含状态变量的合约，接下来让我们深入了解如何通过函数与这些变量进行交互。  
 
-### Function Definition
+### 函数定义  
 
-Before we can use a function in our `SimpleContract`, we need to define it. In Solidity, functions are defined using the `function` keyword, followed by a unique function name, an optional list of parameters, and a statement block enclosed in curly braces. A basic **syntax** is,
+在我们的 `SimpleContract` 中使用函数之前，我们需要先定义它。在 Solidity 中，函数使用 `function` 关键字定义，后面跟着一个唯一的函数名、可选的参数列表以及用大括号 `{}` 包裹的语句块。基本 **语法** 如下：  
 
-```solidity
-function functionName(int arg1, string memory arg2, ...) visisbility stateMutilability returns() {
-   // Logics goes here :)
+```solidity  
+function functionName(int arg1, string memory arg2, ...) visibility stateMutability returns() {
+   // 逻辑写在这里 :)  
 }
-```
+```  
 
-### Function Name
+### 函数名  
 
-This declares the function with a unique name (`functionName`), which is how you will call it.
+函数名必须是唯一的，通过这个名字 (`functionName`) 您可以调用该函数。  
 
-### Parameters
+### 参数  
 
-This part specifies the function's parameters, where `arg1` is an integer and `arg2` is a string stored in memory; additional parameters can be included as needed.
+参数部分定义了函数的参数，例如 `arg1` 是一个整数，而 `arg2` 是存储在内存中的字符串；根据需要可以添加其他参数。  
 
-### Visibility
+### 可见性 (Visibility)  
 
-This defines the access level of the function, such as `public`, `private`, or `internal`, determining who can call the function.
+这决定了函数的访问级别，例如 `public`、`private` 或 `internal`，用于定义谁可以调用该函数。  
 
-### State Mutability
+### 状态可变性 (State Mutability)  
 
-> ⚠️**Note:** We'll be going over the concept of scope in the next resource!
+> ⚠️ **注意**：我们将在下一个资源中介绍作用域的概念！  
 
-This indicates whether the function can modify the contract's state (e.g., `pure`, `view`, or `nonpayable`), affecting how it interacts with the blockchain.
+状态可变性指示函数是否可以修改合约的状态，例如 `pure`、`view` 或 `nonpayable`，并影响其与区块链的交互方式。  
 
-### Return Types
+### 返回类型  
 
-This specifies the return type of the function, indicating what value it will output when called; the parentheses can contain the type if the function returns a value.
+返回类型指定了函数调用时的输出值类型；如果函数有返回值，可以在括号中注明类型。  
 
-For example, `returns(uint)` means the function will return an unsigned integer.
+例如，`returns(uint)` 表示函数将返回一个无符号整数：  
 
-```solidity
+```solidity  
 function getValue() public view returns(uint) {
-	return 1;
+	return 1;  
 }
-```
+```  
 
-### Task 📝
+### 任务 📝  
 
-Add the following function to your `SimpleContract` to allow users to set the `name` state variable:
+向您的 `SimpleContract` 添加以下函数，让用户可以设置 `name` 状态变量：  
 
-```solidity
-function set(string memory _name) public;
-```
+```solidity  
+function set(string memory _name) public;  
+```  
 
-This function takes a string parameter `_name` and updates the `name` variable in the contract.
+这个函数接受一个字符串参数 `_name` 并更新合约中的 `name` 变量。  

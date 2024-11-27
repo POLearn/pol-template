@@ -1,15 +1,15 @@
-# Proof of Learn (POL) 3 Template
+# 学习证明 (Proof of Learn, POL) 3 模板  
 
-This template is your perfect starting point for creating engaging and interactive learning content on the **Proof of Learn (POL)** platform!
+这个模板是您在 **Proof of Learn (POL)** 平台上创建引人入胜和互动学习内容的完美起点！  
 
-So, welcome aboard! 👋 Get ready to dive into an exciting learning experience where you'll discover how to deploy a smart contract on the Open Campus Codex chain. With every step of your journey, you’ll not only learn but also unlock earning opportunities, all while keeping everything trackable on the blockchain! 
+欢迎加入！👋 准备好开始一段激动人心的学习旅程吧！在这里，您将学习如何在 Open Campus Codex 链上部署智能合约。在学习过程中，您不仅能够掌握知识，还能解锁赚取奖励的机会，同时所有步骤都会在区块链上进行可追踪记录！  
 
-All the resources and content you need are available right here: [GitHub Repository](https://github.com/5208980/pol-template). Happy learning, and let’s make this journey unforgettable!
+您所需的所有资源和内容都在这里：[GitHub 仓库](https://github.com/5208980/pol-template)。祝您学习愉快，让我们一起让这段旅程变得难忘吧！  
 
-### Explore the Template on POL
+### 在 POL 上探索模板  
 
-All sections and guides in this template are crafted as Markdown files located in the `/content` folder. This setup makes it super easy to customize and expand upon the content as you create your own exciting quests and learning resources! 📚✨
+此模板中的所有章节和指南都以 Markdown 文件的形式存放在 `/content` 文件夹中。这样的设置让您在创建自己的任务和学习资源时，可以轻松地自定义和扩展内容！📚✨  
 
-The template also includes a pre-configured quest structure to get you started. You can find the quest configuration file [here](https://github.com/5208980/pol-template/blob/master/quest.config.json). Feel free to tweak it to suit your specific needs and let your creativity shine!
+模板还包含一个预配置的任务结构，助您快速入门。您可以在 [quest.config.json](https://github.com/5208980/pol-template/blob/master/quest.config.json) 文件中找到任务配置文件。随意根据您的具体需求进行调整，让您的创意尽情释放吧！  
 
-Happy exploring, and enjoy building your learning adventures and explore the following few content to deploy **interactively** deploy a smart contract and mint a POL POAP!
+祝您探索愉快！享受构建学习冒险的过程，并探索以下内容，**互动式**地部署智能合约并铸造一个 POL POAP！  
