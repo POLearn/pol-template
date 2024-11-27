@@ -1,12 +1,12 @@
-# Leveling Up: Deploying an ERC20 Token
+# अगला कदम: ERC20 टोकन का डेप्लॉयमेंट
 
-Now that you've successfully deployed and interacted with your first smart contract, it’s time to take things up a notch! In this next part, we’ll guide you through deploying your own ERC20 token, using OpenZeppelin’s battle-tested ERC20🪙 implementation. Let’s get started on creating your very own token on the Open Campus Codex network
+अब जब आपने अपना पहला स्मार्ट कॉन्ट्रैक्ट सफलतापूर्वक डिप्लॉय और इंटरैक्ट किया है, तो हम अगले स्तर पर बढ़ते हैं! इस बार, हम आपको OpenZeppelin के परीक्षण किए गए ERC20🪙 टोकन को डिप्लॉय करने की प्रक्रिया सिखाएंगे। चलिए, Open Campus Codex नेटवर्क पर अपना खुद का टोकन बनाते हैं!
 
-### What is OpenZeppelin?
+### OpenZeppelin क्या है?
 
-OpenZeppelin is a library for secure smart contract development. It provides implementations of popular token standards, including ERC20, which you can use to create your own tokens without having to reinvent the wheel. Using OpenZeppelin's implementations ensures that your token adheres to best practices and standards in the Ethereum ecosystem.
+OpenZeppelin एक ऐसी लाइब्रेरी है जो स्मार्ट कॉन्ट्रैक्ट्स को सुरक्षित रूप से विकसित करने के लिए बनाई गई है। यह ERC20 जैसे लोकप्रिय टोकन मानकों की पहले से बनी हुई इम्प्लीमेंटेशन प्रदान करती है, जिसका उपयोग आप अपना खुद का टोकन बनाने के लिए कर सकते हैं, बिना यह सब फिर से बनाने की जरूरत के। OpenZeppelin की इम्प्लीमेंटेशन का उपयोग करने से यह सुनिश्चित होता है कि आपका टोकन Ethereum के इकोसिस्टम में सर्वोत्तम प्रैक्टिस और स्टैंडर्ड्स का पालन करता है।
 
-From understanding the basic structure of the contract, let create a `SampleERCToken`
+आइए, समझते हैं एक बेसिक `SampleERCToken` का उदाहरण:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -16,51 +16,46 @@ contract SampleERCToken {
 }
 ```
 
+### OpenZeppelin ERC20 को इम्पोर्ट करना
 
-### Import OpenZeppelin ERC20
-
-In your `TokenPoken.sol` file, start by importing OpenZeppelin’s ERC20 implementation with the following statement:
+अब, अपने `TokenPoken.sol` फाइल में OpenZeppelin के ERC20 की इम्प्लीमेंटेशन को इम्पोर्ट करें:
 
 ```solidity
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 ```
 
-This allows you to inherit the ERC20 contract and build your token on top of it. OpenZeppelin provides a secure, battle-tested foundation for ERC20 tokens.
+यह कोड आपको ERC20 कॉन्ट्रैक्ट को विरासत में लेने की अनुमति देता है और आप इसका उपयोग करके अपना टोकन बना सकते हैं। OpenZeppelin आपके टोकन को सुरक्षित और आसानी से डेवेलप करने की सुविधा देता है।
 
-### Write the Token Contract
+### टोकन कॉन्ट्रैक्ट लिखें
 
-Next, define your ERC20 token by writing the contract code. Use the name "TokenPoken" and symbol "TP" as arguments to the ERC20 constructor. Make sure the constructor is empty, only calling the `ERC20` constructor:
-
-For more details on the ERC20 contract, refer to the [OpenZeppelin documentation](https://docs.openzeppelin.com/contracts/4.x/erc20) to understand its features and functionality.
-
-Here's a head start,
+अब, ERC20 टोकन को डिफाइन करें। हम "TokenPoken" नाम और "TP" सिंबोल का उपयोग करेंगे, और ERC20 कॉन्ट्रैक्ट का कंस्ट्रक्टर खाली छोड़ेंगे, सिर्फ `ERC20` कंस्ट्रक्टर को कॉल करेंगे।
 
 ```solidity
 contract SampleERCToken is ERC20 { 
-	// ...
+    // टोकन की इम्प्लीमेंटेशन यहाँ आएगी
 }
 ```
 
-This code defines the basic structure of your token, using OpenZeppelin's contract for security and ease.
+यह कोड आपके टोकन की बुनियादी संरचना को परिभाषित करता है, जिसमें OpenZeppelin का ERC20 कॉन्ट्रैक्ट सुरक्षा और आसानी प्रदान करता है।
 
-### Compile the Contract
+### कॉन्ट्रैक्ट को कम्पाइल करें
 
-To compile, open your Solidity IDE and select the **0.8.23** compiler version. Click "Compile" to ensure there are no errors, and a green checkmark should confirm successful compilation.
+अब, अपने Solidity IDE में जाएं और **0.8.23** कंपाइलर संस्करण चुनें। "Compile" बटन पर क्लिक करें और यह सुनिश्चित करें कि कोई एरर न हो। यदि सब कुछ सही है, तो ग्रीन चेकमार्क दिखाई देगा जो पुष्टि करेगा कि आपकी कोड सही से कम्पाइल हो गई है।
 
-### Deploy the Contract
+### कॉन्ट्रैक्ट को डिप्लॉय करें
 
-If you are using the Solide IDE, in the **Build & Deploy Tab**, select the the `SampleERCToken` and click on **Deploy**
+यदि आप Solide IDE का उपयोग कर रहे हैं, तो **Build & Deploy Tab** में जाकर `SampleERCToken` का चयन करें और **Deploy** बटन पर क्लिक करें।
 
-### Testing Your Token
+### अपने टोकन का परीक्षण करें
 
-Once your `TokenPoken` contract is deployed, you can interact with its inherited ERC20 functions. Here are a few actions to try:
+अब जब आपका `TokenPoken` कॉन्ट्रैक्ट डिप्लॉय हो चुका है, आप इसके द्वारा उपलब्ध ERC20 फ़ंक्शन का उपयोग करके इंटरैक्ट कर सकते हैं। यहाँ कुछ एक्शन दिए गए हैं, जिन्हें आप ट्राई कर सकते हैं:
 
-- 🧮 **Check Total Supply:** Call `totalSupply` to view the total TokenPoken tokens.
-- 👛 **Check Your Balance:** Use `balanceOf` with your address to see your token balance.
-- 🔄 **Transfer Tokens:** Try the `transfer` function to send tokens to another wallet.
+- 🧮 **कुल सप्लाई चेक करें:** `totalSupply` कॉल करें और TokenPoken टोकन की कुल संख्या देखें।
+- 👛 **अपना बैलेंस चेक करें:** `balanceOf` के साथ अपना एड्रेस डालकर अपना टोकन बैलेंस देखें।
+- 🔄 **टोकन ट्रांसफर करें:** `transfer` फ़ंक्शन का उपयोग करके किसी अन्य वॉलेट में टोकन भेजें।
 
-### ❗Submit the Deployment to Proof of Learn
+### ❗ Proof of Learn में डिप्लॉयमेंट सबमिट करें
 
-If you deployed a `SimpleContract` earlier, you can do the same for `SimpleERCToken`. Congratulations! You've successfully created and deployed your own ERC20 token called TokenPoken with the symbol TP using OpenZeppelin's ERC20 contract. This exercise demonstrates the power and ease of using OpenZeppelin for secure and standardized smart contract development.
+यदि आपने पहले `SimpleContract` डिप्लॉय किया था, तो अब आप `SampleERCToken` के लिए भी ऐसा कर सकते हैं। बधाई हो! आपने सफलतापूर्वक OpenZeppelin के ERC20 कॉन्ट्रैक्ट का उपयोग करके अपना खुद का ERC20 टोकन TokenPoken (TP सिंबोल के साथ) डिप्लॉय किया है। यह एक्सरसाइज OpenZeppelin के उपयोग से स्मार्ट कॉन्ट्रैक्ट डेवलपमेंट की शक्ति और सरलता को दर्शाती है।
 
-Make sure you claim for **FREE POL POAP** from Proof of Learn, showcasing you deployed and interact smart contract on Open Campus Codex! 🎉🎉🎉
+अब, **FREE POL POAP** के लिए Proof of Learn से दावा करें, जो इस बात को प्रमाणित करता है कि आपने Open Campus Codex पर स्मार्ट कॉन्ट्रैक्ट डिप्लॉय और इंटरैक्ट किया है! 🎉🎉🎉

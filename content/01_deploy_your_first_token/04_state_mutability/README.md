@@ -1,21 +1,51 @@
 # State Mutability
 
-### Introduction
+### परिचय
 
-State mutability in Solidity specifies how a function interacts with the contract's state and the blockchain. Understanding state mutability is crucial for optimizing gas usage and ensuring that functions behave as intended. 
+Solidity में **State Mutability** यह निर्धारित करता है कि एक फंक्शन कॉन्ट्रैक्ट की स्थिति और ब्लॉकचेन के साथ कैसे इंटरएक्ट करता है। State mutability को समझना बहुत महत्वपूर्ण है, क्योंकि यह गैस के उपयोग को अनुकूलित करने और यह सुनिश्चित करने में मदद करता है कि फंक्शंस सही तरीके से कार्य करें।
 
-There are three primary types of state mutability in Solidity: `pure`, `view`, and `nonpayable`.
+Solidity में **तीन प्रमुख प्रकार** होते हैं: `pure`, `view`, और `nonpayable`।
 
 ### Pure
 
-A `pure` function indicates that it does not read or modify the contract's state. It solely relies on its input parameters and is typically used for computations.
+`pure` फंक्शन यह इंगीत करता है कि यह कॉन्ट्रैक्ट की स्थिति को न तो पढ़ता है और न ही बदलता है। यह केवल अपनी इनपुट पैरामीटर्स पर निर्भर करता है और सामान्यतः गणना (computations) के लिए उपयोग किया जाता है।
+
+उदाहरण के लिए, यदि आपको दो नंबरों को जोड़ने के लिए एक फंक्शन चाहिए, जो न तो कॉन्ट्रैक्ट के किसी भी डेटा को पढ़े और न ही उसे बदलें, तो आप इसे `pure` घोषित करेंगे:
+
+```solidity
+function addNumbers(uint a, uint b) public pure returns (uint) {
+    return a + b;
+}
+```
 
 ### View
 
-A `view` function allows reading the contract's state but prohibits any modifications. It can be used to access data stored in the contract without changing it.
+`view` फंक्शन कॉन्ट्रैक्ट की स्थिति को पढ़ने की अनुमति देता है, लेकिन किसी भी प्रकार के बदलाव की अनुमति नहीं देता। यह फंक्शन कॉन्ट्रैक्ट के डेटा को एक्सेस करने के लिए उपयोगी होता है, लेकिन यह डेटा को बदलने में सक्षम नहीं होता।
+
+उदाहरण के लिए, अगर आपको कॉन्ट्रैक्ट के `name` वेरिएबल को सिर्फ पढ़ने का फंक्शन चाहिए:
+
+```solidity
+function getName() public view returns (string memory) {
+    return name;
+}
+```
+
+यह फंक्शन केवल `name` वेरिएबल को पढ़ता है, और इसे किसी भी गैस शुल्क की आवश्यकता नहीं होती क्योंकि यह सिर्फ डेटा को रीड करता है और कोई बदलाव नहीं करता।
 
 ### Nonpayable
 
-A `nonpayable` function can modify the contract's state and allows for receiving Ether but does not accept any Ether during the call. It is the default state mutability if none is specified.
+`nonpayable` फंक्शन कॉन्ट्रैक्ट की स्थिति को बदल सकता है और **Ether प्राप्त कर सकता है**, लेकिन यह कॉल के दौरान Ether को स्वीकार नहीं करता। यदि कोई भी वेल्यू (जैसे Ether) पास नहीं किया जाता है, तो यह डिफॉल्ट state mutability होता है।
 
-By using the correct state mutability for your functions, you can ensure clarity in their behavior and optimize gas costs for your contract's interactions.
+उदाहरण के लिए, यदि आप एक फंक्शन बनाना चाहते हैं जो कॉन्ट्रैक्ट की स्थिति को अपडेट करेगा, तो आप इसे `nonpayable` घोषित करेंगे:
+
+```solidity
+function setName(string memory newName) public nonpayable {
+    name = newName;
+}
+```
+
+यह फंक्शन कॉन्ट्रैक्ट की `name` वेरिएबल को अपडेट करता है और Ether प्राप्त करने के लिए डिज़ाइन नहीं किया गया है।
+
+### निष्कर्ष
+
+फंक्शंस के लिए सही state mutability का चयन करके आप अपने कॉन्ट्रैक्ट के व्यवहार को स्पष्ट कर सकते हैं और गैस लागत को अनुकूलित कर सकते हैं। यह सुनिश्चित करता है कि आपका कॉन्ट्रैक्ट केवल आवश्यक कार्य ही करेगा, जिससे सुरक्षा और प्रदर्शन में सुधार होता है।
