@@ -1,23 +1,25 @@
-# Tương tác với một Smart Contract
+# Tương Tác với Hợp Đồng Thông Minh
 
-### Giới thiệu
+Đến phần cuối của việc triển khai hợp đồng đầu tiên, hãy cùng học cách tương tác với hợp đồng đã triển khai của bạn bằng cách sử dụng phương thức setter để cập nhật biến `name` 🔧
 
-Trong phần cuối cùng của việc triển khai hợp đồng đầu tiên, chúng ta sẽ học cách tương tác với hợp đồng đã triển khai của bạn, sử dụng phương thức setter để cập nhật biến `name` 🔧
+> Điều kiện tiên quyết: Đảm bảo bạn đã cài đặt MetaMask, kết nối với mạng EDU Chain Testnet, và hợp đồng `SimpleContract` của bạn đã được triển khai thành công.
 
-> Yêu cầu: Đảm bảo bạn đã cài đặt MetaMask và kết nối với mạng Open Campus Codex, và hợp đồng **SimpleContract** của bạn đã được triển khai thành công.
+### Tương Tác với Hợp Đồng
 
-### Tương tác với Hợp đồng
+![](https://raw.githubusercontent.com/POLearn/pol-template/refs/heads/master/content/assets/images/contract.png)
 
-Bây giờ hợp đồng **SimpleContract** của bạn đã được triển khai trên mạng Open Campus Codex, hãy thay đổi biến `name` thành **Vitalik** sử dụng phương thức `set` và lấy hash giao dịch để xác nhận giao dịch.
+Giờ hợp đồng `SimpleContract` của bạn đã được triển khai trên mạng EDU Chain Testnet, hãy sử dụng phương thức `set` để cập nhật biến `name` thành `Vitalik` và lấy mã giao dịch để xác minh giao dịch.
 
-#### Gọi Phương thức set
+### ❗Nhiệm vụ: Gọi phương thức `set`
 
-Đầu tiên, tìm phương thức `set` trong giao diện hợp đồng của bạn. Trong trường nhập liệu, gõ **Vitalik** và nhấn "Transact". MetaMask sẽ yêu cầu bạn xác nhận giao dịch—hãy chấp nhận giao dịch và đợi cho giao dịch được xử lý.
+![](https://raw.githubusercontent.com/POLearn/pol-template/refs/heads/master/content/assets/images/contract_set.png)
 
-#### Xác minh Trạng thái Hợp đồng
+Bạn có thể nhấp vào phương thức `set` trong giao diện hợp đồng của mình. Vì hợp đồng có một đối số, bạn sẽ nhập tên vào đó. Nhập giá trị **Vitalik** và nhấp *Send*. Điều này sẽ yêu cầu bạn xác nhận giao dịch và cho phép bạn phê duyệt nó.
 
-Sau khi giao dịch được xác nhận, gọi phương thức `name` trong hợp đồng của bạn để kiểm tra giá trị hiện tại. Nếu nó trả về **Vitalik**, chúc mừng bạn! Bạn đã thành công trong việc tương tác với hợp đồng và cập nhật trạng thái của nó. 🎉
+### Tương Tác với Trạng Thái Hợp Đồng
 
-### ❗ Nộp Giao dịch lên Proof of Learn
+![](https://raw.githubusercontent.com/POLearn/pol-template/refs/heads/master/content/assets/images/contract_name.png)
 
-Để xác nhận nhiệm vụ này, hãy nộp hash giao dịch lên nền tảng Proof of Learn (POL). Điều này xác nhận rằng bạn đã thành công trong việc tương tác với smart contract.
+Khi giao dịch đã được xác nhận, hãy gọi hàm `name` trong hợp đồng của bạn để kiểm tra giá trị hiện tại của nó. Nếu trả về `Vitalik`, chúc mừng bạn! Bạn đã thành công trong việc tương tác với hợp đồng và cập nhật trạng thái của nó. 🎉
+
+Bạn có thể gửi giao dịch phương thức `set` lên nền tảng Proof of Learn (POL) cho nhiệm vụ này. Điều này xác nhận rằng bạn đã thành công trong việc tương tác với hợp đồng thông minh trên EDU Chain.

@@ -1,65 +1,64 @@
-# Cấp Độ Tiếp Theo: Triển Khai Token ERC20
+# Triển khai Token ERC20
 
-Bây giờ bạn đã thành công trong việc triển khai và tương tác với smart contract đầu tiên, đã đến lúc nâng cấp! Trong phần này, chúng ta sẽ hướng dẫn bạn triển khai token ERC20 của riêng bạn, sử dụng việc triển khai ERC20 🪙 đã được kiểm chứng của OpenZeppelin. Hãy bắt đầu tạo token của bạn trên mạng Open Campus Codex!
+Với hiểu biết cơ bản về hợp đồng thông minh và cách sử dụng EDU Chain để tương tác và làm việc với chúng, đã đến lúc nâng cao kiến thức của bạn! Trong phần này, chúng ta sẽ hướng dẫn bạn cách triển khai **token ERC20** của riêng mình, sử dụng triển khai ERC20 đã được kiểm nghiệm của OpenZeppelin 🪙.
 
 ### OpenZeppelin là gì?
 
-OpenZeppelin là một thư viện phát triển smart contract an toàn. Nó cung cấp các triển khai của các tiêu chuẩn token phổ biến, bao gồm ERC20, mà bạn có thể sử dụng để tạo token của riêng mình mà không cần phải làm lại từ đầu. Sử dụng các triển khai của OpenZeppelin đảm bảo rằng token của bạn tuân thủ các thực tiễn và tiêu chuẩn tốt nhất trong hệ sinh thái Ethereum.
+Trước khi đi sâu vào hợp đồng, chúng ta hãy hiểu về OpenZeppelin. OpenZeppelin là một thư viện phát triển hợp đồng thông minh an toàn. Nó cung cấp các triển khai cho các chuẩn token phổ biến, bao gồm ERC20, mà bạn có thể sử dụng để tạo token của riêng mình mà không phải tái phát minh lại bánh xe. Sử dụng các triển khai của OpenZeppelin đảm bảo rằng token của bạn tuân thủ các thực tiễn tốt nhất và các tiêu chuẩn trong hệ sinh thái Ethereum.
 
-Từ việc hiểu cấu trúc cơ bản của hợp đồng, chúng ta sẽ tạo ra một token `SampleERCToken`.
+Sau khi hiểu cấu trúc cơ bản của hợp đồng, hãy tạo một `SampleERCToken`. Tải mẫu hợp đồng [tại đây](https://github.com/POLearn/pol-template/blob/master/contracts/SampleERCToken.sol) vào IDE bạn mong muốn.
 
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+![](https://raw.githubusercontent.com/POLearn/pol-template/refs/heads/master/content/assets/images/token_load.png)
 
-contract SampleERCToken {
-}
-```
-
-### Nhập OpenZeppelin ERC20
-
-Trong file `TokenPoken.sol` của bạn, bắt đầu bằng việc nhập triển khai ERC20 của OpenZeppelin với câu lệnh sau:
+Như chúng ta thấy, hợp đồng này là một hợp đồng trống. Tuy nhiên, đáng chú ý là có một import hợp đồng `ERC20` của OpenZeppelin. Hãy xem qua phần đó.
 
 ```solidity
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 ```
 
-Điều này cho phép bạn kế thừa hợp đồng ERC20 và xây dựng token của mình dựa trên đó. OpenZeppelin cung cấp một nền tảng an toàn và đã được kiểm chứng cho các token ERC20.
+Điều này cho phép bạn kế thừa hợp đồng ERC20 và xây dựng token của bạn trên nền tảng đó. OpenZeppelin cung cấp một nền tảng an toàn, đã được kiểm nghiệm cho các token ERC20.
 
-### Viết Hợp Đồng Token
+![](https://raw.githubusercontent.com/POLearn/pol-template/refs/heads/master/content/assets/images/token_setup.png)
 
-Tiếp theo, hãy định nghĩa token ERC20 của bạn bằng cách viết mã hợp đồng. Sử dụng tên "TokenPoken" và ký hiệu "TP" làm đối số cho constructor ERC20. Đảm bảo rằng constructor là rỗng, chỉ gọi constructor `ERC20`:
+Nếu chúng ta xem qua constructor, nó nhận vào hai tham số là `name` và `symbol`. Các mã còn lại là các triển khai cho việc minting và chuyển nhượng token ERC20, tất cả đã được hoàn thành cho bạn.
 
-Để biết thêm chi tiết về hợp đồng ERC20, hãy tham khảo [tài liệu của OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/erc20) để hiểu các tính năng và chức năng của nó.
-
-Dưới đây là mã bắt đầu:
+Hãy kế thừa điều này trong hợp đồng chính của chúng ta. Quay lại `SampleERCToken`. Đảm bảo rằng hợp đồng của bạn là `ERC20` như sau:
 
 ```solidity
-contract SampleERCToken is ERC20 { 
-	// ...
+contract SampleERCToken is ERC20
+```
+
+Trong constructor, chúng ta cũng đảm bảo gọi đến constructor của ERC20:
+
+```solidity
+constructor() ERC20("TokenName", "TOKEN") {
 }
 ```
 
-Mã này định nghĩa cấu trúc cơ bản của token của bạn, sử dụng hợp đồng của OpenZeppelin để đảm bảo an toàn và dễ dàng.
+Chúng ta sẽ định nghĩa token ERC20 bằng cách viết mã hợp đồng. Sử dụng tên "TokenPoken" và biểu tượng "TP" làm tham số cho constructor của ERC20. Đảm bảo constructor là trống, chỉ gọi đến constructor `ERC20`:
 
-### Biên Dịch Hợp Đồng
+Để biết thêm chi tiết về hợp đồng ERC20, tham khảo [tài liệu OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/erc20) để hiểu thêm về các tính năng và chức năng của nó.
 
-Để biên dịch, mở IDE Solidity của bạn và chọn phiên bản biên dịch **0.8.23**. Nhấn "Compile" để đảm bảo không có lỗi, và một dấu tích màu xanh lá cây sẽ xác nhận biên dịch thành công.
+### Biên dịch hợp đồng
 
-### Triển Khai Hợp Đồng
+Giống như hợp đồng trước, hãy đảm bảo bạn đang sử dụng đúng phiên bản trình biên dịch Solidity. Đối với bài tập này, chúng ta sẽ sử dụng **0.8.23**. Việc sử dụng đúng phiên bản là rất quan trọng, vì các tính năng và cú pháp có thể thay đổi giữa các phiên bản.
 
-Nếu bạn đang sử dụng Solide IDE, trong **Tab Build & Deploy**, chọn `SampleERCToken` và nhấn **Deploy**.
+### Triển khai hợp đồng
 
-### Kiểm Tra Token
+Sau khi hợp đồng của bạn được biên dịch, hãy triển khai `SampleERCToken` lên EDU Chain testnet mà chúng ta đã kết nối. MetaMask sẽ yêu cầu bạn xác nhận giao dịch để triển khai hợp đồng.
 
-Sau khi hợp đồng `TokenPoken` của bạn được triển khai, bạn có thể tương tác với các hàm ERC20 đã kế thừa. Dưới đây là một số hành động để thử:
+### Kiểm tra Token của bạn
 
-- 🧮 **Kiểm tra Tổng Cung:** Gọi `totalSupply` để xem tổng số token TokenPoken.
-- 👛 **Kiểm tra Số Dư của Bạn:** Sử dụng `balanceOf` với địa chỉ của bạn để xem số dư token của bạn.
-- 🔄 **Chuyển Token:** Thử sử dụng hàm `transfer` để gửi token đến ví khác.
+Khi hợp đồng `TokenPoken` của bạn đã được triển khai, bạn có thể tương tác với các hàm ERC20 được kế thừa. Dưới đây là một số hành động bạn có thể thử:
 
-### ❗ Nộp Giao Dịch lên Proof of Learn
+- 🧮 **Kiểm tra tổng cung:** Gọi `totalSupply` để xem tổng số token TokenPoken.
+- 👛 **Kiểm tra số dư của bạn:** Sử dụng `balanceOf` với địa chỉ của bạn để xem số dư token của bạn.
+- 🔄 **Chuyển token:** Thử hàm `name` để gửi token đến ví khác.
 
-Nếu bạn đã triển khai `SimpleContract` trước đó, bạn có thể làm điều tương tự với `SampleERCToken`. Chúc mừng! Bạn đã thành công trong việc tạo và triển khai token ERC20 của riêng mình có tên là TokenPoken với ký hiệu TP, sử dụng hợp đồng ERC20 của OpenZeppelin. Bài tập này chứng minh sức mạnh và sự dễ dàng khi sử dụng OpenZeppelin để phát triển smart contract an toàn và chuẩn hóa.
+![](https://raw.githubusercontent.com/POLearn/pol-template/refs/heads/master/content/assets/images/token_name.png)
 
-Hãy chắc chắn nhận **FREE POL POAP** từ Proof of Learn, chứng nhận bạn đã triển khai và tương tác với smart contract trên Open Campus Codex! 🎉🎉🎉
+### ❗Quest: Triển khai Token
+
+Nếu bạn đã triển khai `SimpleContract` trước đó, bạn có thể làm điều tương tự cho `SampleERCToken`. Chúc mừng! Bạn đã thành công trong việc tạo và triển khai token ERC20 của riêng mình có tên là TokenPoken với biểu tượng TP sử dụng hợp đồng ERC20 của OpenZeppelin. Bài tập này thể hiện sức mạnh và sự dễ dàng khi sử dụng OpenZeppelin cho phát triển hợp đồng thông minh an toàn và chuẩn hóa.
+
+Hãy chắc chắn yêu cầu **POL POAP** từ Proof of Learn, chứng minh rằng bạn đã triển khai và tương tác hợp đồng thông minh trên EDU Chain! 🎉🎉🎉
