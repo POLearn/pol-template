@@ -1,23 +1,25 @@
 # Interacción con un Contrato Inteligente
 
-### Introducción
+Para esta última sección de desplegar tu primer contrato, aprendamos cómo interactuar con tu contrato desplegado utilizando el método setter para actualizar la variable `name` 🔧
 
-En esta última sección sobre el despliegue de tu primer contrato, aprenderemos cómo interactuar con tu contrato desplegado utilizando el método setter para actualizar la variable `name` 🔧
-
-> Prerequisito: Asegúrate de tener MetaMask instalado y conectado a la red Open Campus Codex, y que tu contrato `SimpleContract` esté correctamente desplegado.
+> Prerrequisito: Asegúrate de tener MetaMask instalado y conectado a la red EDU Chain Testnet, y que tu contrato `SimpleContract` esté desplegado correctamente.
 
 ### Interactuar con el Contrato
 
-Ahora que tu contrato `SimpleContract` está desplegado en la red Open Campus Codex, vamos a cambiar la variable `name` a **Vitalik** usando el método `set` y recuperar el hash de la transacción para verificar la transacción.
+![](https://raw.githubusercontent.com/POLearn/pol-template/refs/heads/master/content/assets/images/contract.png)
 
-#### Llamar al Método `set`
+Ahora que tu contrato `SimpleContract` está desplegado en la red EDU Chain Testnet, vamos a almacenar la variable `name` como `Vitalik` utilizando el método `set` y recuperar el hash de la transacción para verificarla.
 
-Primero, localiza la función `set` en la interfaz de tu contrato. En el campo de entrada, escribe **Vitalik** y haz clic en "Transact." MetaMask te pedirá que confirmes la transacción; apruébala y espera a que la transacción sea procesada.
+### ❗Misión: Llamar al método `set`
 
-#### Verificar el Estado del Contrato
+![](https://raw.githubusercontent.com/POLearn/pol-template/refs/heads/master/content/assets/images/contract_set.png)
 
-Una vez que la transacción sea confirmada, llama a la función `name` en tu contrato para verificar su valor actual. Si devuelve **Vitalik**, ¡felicitaciones! Has interactuado con éxito con tu contrato y actualizado su estado. 🎉
+Puedes hacer clic en el método `set` en la interfaz de tu contrato. Dado que el contrato tiene un argumento, podrás ingresar el nombre. Ingresa el valor **Vitalik** y haz clic en *Enviar*. Esto te pedirá que confirmes la transacción y te permitirá aprobarla.
 
-### ❗Enviar la Transacción a Proof of Learn
+### Interactuar con el estado del contrato
 
-Para validar esta misión, envía el hash de la transacción a la plataforma Proof of Learn (POL). Esto confirma que has interactuado con éxito con el contrato inteligente.
+![](https://raw.githubusercontent.com/POLearn/pol-template/refs/heads/master/content/assets/images/contract_name.png)
+
+Una vez que la transacción sea confirmada, llama a la función `name` en tu contrato para comprobar su valor actual. Si devuelve `Vitalik`, ¡felicitaciones! Has interactuado con éxito con tu contrato y actualizado su estado. 🎉
+
+Puedes enviar la transacción del método `set` a la plataforma Proof of Learn (POL) para esta misión. Esto confirma que has interactuado exitosamente con el contrato inteligente en EDU Chain.
